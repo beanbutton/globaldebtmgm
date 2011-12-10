@@ -1,0 +1,34 @@
+<?php
+$this->breadcrumbs=array(
+	'Amortizations'=>array('index'),
+	$model->id,
+);
+
+$this->menu=array(
+	array('label'=>'List Amortization', 'url'=>array('index')),
+	array('label'=>'Create Amortization', 'url'=>array('create')),
+	array('label'=>'Update Amortization', 'url'=>array('update', 'id'=>$model->id)),
+	array('label'=>'Delete Amortization', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?')),
+	array('label'=>'Manage Amortization', 'url'=>array('admin')),
+);
+?>
+
+<h1>View Amortization #<?php echo $model->id; ?></h1>
+
+<?php $this->widget('zii.widgets.CDetailView', array(
+	'data'=>$model,
+	'attributes'=>array(
+		'id',
+		'payment_date',
+		'total_monthly_cost',
+		'adminstration_fee',
+		'maintenance_fee',
+		'settlement_savings_fund',
+		'total_monthly_cost_total',
+		'total_adminstration_fee',
+		'total_maintenance_fee',
+		'total_settlement_savings_fund',
+		'created_at',
+		'updated_at',
+	),
+)); ?>
