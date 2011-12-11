@@ -24,7 +24,6 @@ $this->menu=array(
 		'salt',
 		'email',
 		'remember_me',
-		'last_login',
 		'created_at',
 		'updated_at',
 	),

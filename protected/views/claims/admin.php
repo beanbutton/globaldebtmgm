@@ -1,12 +1,12 @@
 <?php
 $this->breadcrumbs=array(
-	'Settlement Offers'=>array('index'),
+	'Claims'=>array('index'),
 	'Manage',
 );
 
 $this->menu=array(
-	array('label'=>'List SettlementOffer', 'url'=>array('index')),
-	array('label'=>'Create SettlementOffer', 'url'=>array('create')),
+	array('label'=>'List Claims', 'url'=>array('index')),
+	array('label'=>'Create Claims', 'url'=>array('create')),
 );
 
 Yii::app()->clientScript->registerScript('search', "
@@ -15,7 +15,7 @@ $('.search-button').click(function(){
 	return false;
 });
 $('.search-form form').submit(function(){
-	$.fn.yiiGridView.update('settlement-offer-grid', {
+	$.fn.yiiGridView.update('claims-grid', {
 		data: $(this).serialize()
 	});
 	return false;
@@ -23,7 +23,7 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
-<h1>Manage Settlement Offers</h1>
+<h1>Manage Claims</h1>
 
 <p>
 You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
@@ -38,26 +38,22 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 </div><!-- search-form -->
 
 <?php $this->widget('zii.widgets.grid.CGridView', array(
-	'id'=>'settlement-offer-grid',
+	'id'=>'claims-grid',
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
 	'columns'=>array(
 		'id',
-		'debtor_id',
-		'creditor_id',
-		'negotiator_id',
+		'Fk_clientid',
+		'Fk_creditor_id',
 		'file_number',
-		'offer_date',
+		'account_number',
+		'type_of_debt',
 		/*
-		'offer_amount',
-		'offer_amount_percentage',
-		'client_saving_amonut',
-		'client_savings_percentage',
-		'client_reserves',
-		'service_fees',
-		'difference_amount',
-		'offer_status',
-		'valid_date',
+		'amount_of_claim',
+		'days_behind',
+		'settlement_date',
+		'settlement_amount',
+		'savings',
 		'created_at',
 		'updated_at',
 		*/

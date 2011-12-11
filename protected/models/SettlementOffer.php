@@ -8,6 +8,17 @@
  * @property integer $debtor_id
  * @property integer $creditor_id
  * @property integer $negotiator_id
+ * @property string $file_number
+ * @property string $offer_date
+ * @property double $offer_amount
+ * @property double $offer_amount_percentage
+ * @property double $client_saving_amonut
+ * @property double $client_savings_percentage
+ * @property double $client_reserves
+ * @property double $service_fees
+ * @property double $difference_amount
+ * @property integer $offer_status
+ * @property string $valid_date
  * @property string $created_at
  * @property string $updated_at
  */
@@ -39,11 +50,13 @@ class SettlementOffer extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('created_at', 'required'),
-			array('debtor_id, creditor_id, negotiator_id', 'numerical', 'integerOnly'=>true),
-			array('updated_at', 'safe'),
+			array('debtor_id, creditor_id, negotiator_id, offer_status', 'numerical', 'integerOnly'=>true),
+			array('offer_amount, offer_amount_percentage, client_saving_amonut, client_savings_percentage, client_reserves, service_fees, difference_amount', 'numerical'),
+			array('file_number', 'length', 'max'=>255),
+			array('offer_date, valid_date, updated_at', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, debtor_id, creditor_id, negotiator_id, created_at, updated_at', 'safe', 'on'=>'search'),
+			array('id, debtor_id, creditor_id, negotiator_id, file_number, offer_date, offer_amount, offer_amount_percentage, client_saving_amonut, client_savings_percentage, client_reserves, service_fees, difference_amount, offer_status, valid_date, created_at, updated_at', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -68,6 +81,17 @@ class SettlementOffer extends CActiveRecord
 			'debtor_id' => 'Debtor',
 			'creditor_id' => 'Creditor',
 			'negotiator_id' => 'Negotiator',
+			'file_number' => 'File Number',
+			'offer_date' => 'Offer Date',
+			'offer_amount' => 'Offer Amount',
+			'offer_amount_percentage' => 'Offer Amount Percentage',
+			'client_saving_amonut' => 'Client Saving Amonut',
+			'client_savings_percentage' => 'Client Savings Percentage',
+			'client_reserves' => 'Client Reserves',
+			'service_fees' => 'Service Fees',
+			'difference_amount' => 'Difference Amount',
+			'offer_status' => 'Offer Status',
+			'valid_date' => 'Valid Date',
 			'created_at' => 'Created At',
 			'updated_at' => 'Updated At',
 		);
@@ -88,6 +112,17 @@ class SettlementOffer extends CActiveRecord
 		$criteria->compare('debtor_id',$this->debtor_id);
 		$criteria->compare('creditor_id',$this->creditor_id);
 		$criteria->compare('negotiator_id',$this->negotiator_id);
+		$criteria->compare('file_number',$this->file_number,true);
+		$criteria->compare('offer_date',$this->offer_date,true);
+		$criteria->compare('offer_amount',$this->offer_amount);
+		$criteria->compare('offer_amount_percentage',$this->offer_amount_percentage);
+		$criteria->compare('client_saving_amonut',$this->client_saving_amonut);
+		$criteria->compare('client_savings_percentage',$this->client_savings_percentage);
+		$criteria->compare('client_reserves',$this->client_reserves);
+		$criteria->compare('service_fees',$this->service_fees);
+		$criteria->compare('difference_amount',$this->difference_amount);
+		$criteria->compare('offer_status',$this->offer_status);
+		$criteria->compare('valid_date',$this->valid_date,true);
 		$criteria->compare('created_at',$this->created_at,true);
 		$criteria->compare('updated_at',$this->updated_at,true);
 

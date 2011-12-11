@@ -17,9 +17,9 @@ create table tbl_user
     index(email),
     
     remember_me int default 0,
-    last_login timestamp,
     
-    created_at timestamp, 
-    updated_at timestamp    
+    created_at datetime NOT NULL,
+    updated_at datetime NOT NULL
 
 );
+

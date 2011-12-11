@@ -8,8 +8,10 @@
  * @property string $spouse_firstname
  * @property string $spouse_lastname
  * @property string $spouse_address
+ * @property integer $spouse_marital_status
  * @property double $spouse_monthly_income
  * @property double $spouse_gross_monthly_income
+ * @property integer $spouse_employment_status
  * @property string $spouse_employer
  * @property string $spouse_employment_occupation
  * @property integer $spouse_employment_work_years
@@ -48,13 +50,13 @@ class DebtorAdditionalInfo extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('created_at', 'required'),
-			array('spouse_employment_work_years, spouse_number_of_children, spouse_active_duty', 'numerical', 'integerOnly'=>true),
+			array('spouse_marital_status, spouse_employment_status, spouse_employment_work_years, spouse_number_of_children, spouse_active_duty', 'numerical', 'integerOnly'=>true),
 			array('spouse_monthly_income, spouse_gross_monthly_income', 'numerical'),
 			array('spouse_firstname, spouse_lastname, spouse_address, spouse_employer, spouse_employment_occupation, spouse_drivers_licence, comments', 'length', 'max'=>255),
 			array('updated_at', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, spouse_firstname, spouse_lastname, spouse_address, spouse_monthly_income, spouse_gross_monthly_income, spouse_employer, spouse_employment_occupation, spouse_employment_work_years, spouse_number_of_children, spouse_drivers_licence, spouse_active_duty, comments, created_at, updated_at', 'safe', 'on'=>'search'),
+			array('id, spouse_firstname, spouse_lastname, spouse_address, spouse_marital_status, spouse_monthly_income, spouse_gross_monthly_income, spouse_employment_status, spouse_employer, spouse_employment_occupation, spouse_employment_work_years, spouse_number_of_children, spouse_drivers_licence, spouse_active_duty, comments, created_at, updated_at', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -79,8 +81,10 @@ class DebtorAdditionalInfo extends CActiveRecord
 			'spouse_firstname' => 'Spouse Firstname',
 			'spouse_lastname' => 'Spouse Lastname',
 			'spouse_address' => 'Spouse Address',
+			'spouse_marital_status' => 'Spouse Marital Status',
 			'spouse_monthly_income' => 'Spouse Monthly Income',
 			'spouse_gross_monthly_income' => 'Spouse Gross Monthly Income',
+			'spouse_employment_status' => 'Spouse Employment Status',
 			'spouse_employer' => 'Spouse Employer',
 			'spouse_employment_occupation' => 'Spouse Employment Occupation',
 			'spouse_employment_work_years' => 'Spouse Employment Work Years',
@@ -108,8 +112,10 @@ class DebtorAdditionalInfo extends CActiveRecord
 		$criteria->compare('spouse_firstname',$this->spouse_firstname,true);
 		$criteria->compare('spouse_lastname',$this->spouse_lastname,true);
 		$criteria->compare('spouse_address',$this->spouse_address,true);
+		$criteria->compare('spouse_marital_status',$this->spouse_marital_status);
 		$criteria->compare('spouse_monthly_income',$this->spouse_monthly_income);
 		$criteria->compare('spouse_gross_monthly_income',$this->spouse_gross_monthly_income);
+		$criteria->compare('spouse_employment_status',$this->spouse_employment_status);
 		$criteria->compare('spouse_employer',$this->spouse_employer,true);
 		$criteria->compare('spouse_employment_occupation',$this->spouse_employment_occupation,true);
 		$criteria->compare('spouse_employment_work_years',$this->spouse_employment_work_years);

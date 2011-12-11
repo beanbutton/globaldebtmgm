@@ -7,43 +7,42 @@ create table tbl_debtor
     
     Fk_client_id int,
     index( Fk_client_id ),
-    foreign key(Fk_client_id) references tbl_client(Fk_client_id ),
+    #foreign key(Fk_client_id) references tbl_client(Fk_client_id ),
 
     Fk_debtor_additional_info_id int,
     index( Fk_debtor_additional_info_id),
-    foreign key(Fk_debtor_additional_info_id) references tbl_debtor_additional_info(Fk_debtor_additional_info_id ),
+    #foreign key(Fk_debtor_additional_info_id) references tbl_debtor_additional_info(Fk_debtor_additional_info_id ),
     
     Fk_creditor_id int,
     index( Fk_creditor_id),
-    foreign key(Fk_creditor_id) references tbl_creditor(Fk_creditor_id ),
+    #foreign key(Fk_creditor_id) references tbl_creditor(Fk_creditor_id ),
     
     Fk_negotiator_id int,
     index( Fk_negotiator_id),
-    foreign key(Fk_negotiator_id) references tbl_negotiator(Fk_negotiator_id ),
+    #foreign key(Fk_negotiator_id) references tbl_negotiator(Fk_negotiator_id ),
     
     
     Fk_budget_info_id int,
     index(Fk_budget_info_id),
-    foreign key(Fk_budget_info_id) references tbl_budget_info(Fk_budget_info_id),
+    #foreign key(Fk_budget_info_id) references tbl_budget_info(Fk_budget_info_id),
     
     Fk_program_info_id int,
     index(Fk_program_info_id),
-    foreign key(Fk_program_info_id) references tbl_program_info(Fk_program_info_id),
+    #foreign key(Fk_program_info_id) references tbl_program_info(Fk_program_info_id),
     
     Fk_amortization_id int,
     index(Fk_amortization_id),
-    foreign key(Fk_amortization_id) references tbl_amortization(Fk_amortization_id),
+    #foreign key(Fk_amortization_id) references tbl_amortization(Fk_amortization_id),
   
     Fk_settlement_offer_id int,
     index(Fk_settlement_offer_id),
-    foreign key(Fk_settlement_offer_id) references tbl_settlement_offer(Fk_settlement_offer_id),
+    #foreign key(Fk_settlement_offer_id) references tbl_settlement_offer(Fk_settlement_offer_id),
     
     Fk_client_progress_id int,
     index(Fk_client_progress_id),
-    foreign key(Fk_client_progress_id) references tbl_client_progress(Fk_client_progress_id),
+    #foreign key(Fk_client_progress_id) references tbl_client_progress(Fk_client_progress_id),
     
-  
-    
+    file_number varchar(255), index( file_number),
     firstname varchar(255), index( firstname),
     lastname varchar(255), index( lastname),
     date_of_birth datetime,
@@ -78,5 +77,5 @@ create table tbl_debtor
     comments varchar(255),
     
     created_at timestamp, 
-  	updated_at timestamp
+    updated_at timestamp
 );
