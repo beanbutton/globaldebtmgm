@@ -21,7 +21,6 @@
 		<?php echo $form->error($model,'password'); ?>
 	</div>
 
-
 	<div class="row">
 		<?php echo $form->labelEx($model,'email'); ?>
 		<?php echo $form->textField($model,'email',array('size'=>60,'maxlength'=>255)); ?>
@@ -30,7 +29,7 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'remember_me'); ?>
-		<?php echo $form->textField($model,'remember_me'); ?>
+		<?php echo $form->checkBox($model,'remember_me'); ?>
 		<?php echo $form->error($model,'remember_me'); ?>
 	</div>
 

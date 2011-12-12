@@ -42,14 +42,12 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
 	'columns'=>array(
-		'id',
-		'monthly_payment',
+		/*'id',*/
 		'total_debt',
+		'monthly_payment',
 		'original_debt',
 		'monthly_income',
 		'saf_monthly_payment',
-		/*
-		'nsf_amount',
 		'monthly_payment_due_date',
 		'enrollment_date',
 		'first_monthly_payment_date',
@@ -65,11 +63,13 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 		'service_fee_perc_automatic',
 		'service_fee_manual',
 		'service_fee_perc_manual',
-		'created_at',
+                'nsf_amount',
+		
+            /*'created_at',
 		'updated_at',
-		*/
+		
 		array(
 			'class'=>'CButtonColumn',
-		),
+		),*/
 	),
 )); ?>

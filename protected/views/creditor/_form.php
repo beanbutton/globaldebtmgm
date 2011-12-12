@@ -39,48 +39,6 @@
 		<?php echo $form->error($model,'faxnumber'); ?>
 	</div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'status'); ?>
-		<?php echo $form->textField($model,'status'); ?>
-		<?php echo $form->error($model,'status'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'current_settlement_offer'); ?>
-		<?php echo $form->textField($model,'current_settlement_offer'); ?>
-		<?php echo $form->error($model,'current_settlement_offer'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'current_settlement_perc'); ?>
-		<?php echo $form->textField($model,'current_settlement_perc'); ?>
-		<?php echo $form->error($model,'current_settlement_perc'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'offer_date'); ?>
-		<?php echo $form->textField($model,'offer_date'); ?>
-		<?php echo $form->error($model,'offer_date'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'offer_valid_until_date'); ?>
-		<?php echo $form->textField($model,'offer_valid_until_date'); ?>
-		<?php echo $form->error($model,'offer_valid_until_date'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'created_at'); ?>
-		<?php echo $form->textField($model,'created_at'); ?>
-		<?php echo $form->error($model,'created_at'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'updated_at'); ?>
-		<?php echo $form->textField($model,'updated_at'); ?>
-		<?php echo $form->error($model,'updated_at'); ?>
-	</div>
-
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
 	</div>

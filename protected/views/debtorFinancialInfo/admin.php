@@ -42,22 +42,21 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
 	'columns'=>array(
-		'id',
-		'Fk_debtor_id',
+		/*'id',
+		'Fk_debtor_id',*/
 		'name_financial_institution',
 		'branch_address',
 		'city',
 		'province',
-		/*
 		'phone_number',
 		'institution_numer',
 		'branch_number',
 		'account_number',
-		'created_at',
+		/*'created_at',
 		'updated_at',
-		*/
+		
 		array(
 			'class'=>'CButtonColumn',
-		),
+		),*/
 	),
 )); ?>

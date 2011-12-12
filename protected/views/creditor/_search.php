@@ -36,31 +36,6 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'status'); ?>
-		<?php echo $form->textField($model,'status'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->label($model,'current_settlement_offer'); ?>
-		<?php echo $form->textField($model,'current_settlement_offer'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->label($model,'current_settlement_perc'); ?>
-		<?php echo $form->textField($model,'current_settlement_perc'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->label($model,'offer_date'); ?>
-		<?php echo $form->textField($model,'offer_date'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->label($model,'offer_valid_until_date'); ?>
-		<?php echo $form->textField($model,'offer_valid_until_date'); ?>
-	</div>
-
-	<div class="row">
 		<?php echo $form->label($model,'created_at'); ?>
 		<?php echo $form->textField($model,'created_at'); ?>
 	</div>

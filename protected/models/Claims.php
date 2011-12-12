@@ -9,6 +9,11 @@
  * @property integer $Fk_creditor_id
  * @property string $file_number
  * @property string $account_number
+ * @property integer $status
+ * @property double $current_settlement_offer
+ * @property double $current_settlement_perc
+ * @property string $offer_date
+ * @property string $offer_valid_until_date
  * @property string $type_of_debt
  * @property double $amount_of_claim
  * @property integer $days_behind
@@ -46,13 +51,13 @@ class Claims extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('created_at', 'required'),
-			array('Fk_clientid, Fk_creditor_id, days_behind', 'numerical', 'integerOnly'=>true),
-			array('amount_of_claim, settlement_amount, savings', 'numerical'),
+			array('Fk_clientid, Fk_creditor_id, status, days_behind', 'numerical', 'integerOnly'=>true),
+			array('current_settlement_offer, current_settlement_perc, amount_of_claim, settlement_amount, savings', 'numerical'),
 			array('file_number, account_number, type_of_debt', 'length', 'max'=>255),
-			array('settlement_date, updated_at', 'safe'),
+			array('offer_date, offer_valid_until_date, settlement_date, updated_at', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, Fk_clientid, Fk_creditor_id, file_number, account_number, type_of_debt, amount_of_claim, days_behind, settlement_date, settlement_amount, savings, created_at, updated_at', 'safe', 'on'=>'search'),
+			array('id, Fk_clientid, Fk_creditor_id, file_number, account_number, status, current_settlement_offer, current_settlement_perc, offer_date, offer_valid_until_date, type_of_debt, amount_of_claim, days_behind, settlement_date, settlement_amount, savings, created_at, updated_at', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -78,6 +83,11 @@ class Claims extends CActiveRecord
 			'Fk_creditor_id' => 'Fk Creditor',
 			'file_number' => 'File Number',
 			'account_number' => 'Account Number',
+			'status' => 'Status',
+			'current_settlement_offer' => 'Current Settlement Offer',
+			'current_settlement_perc' => 'Current Settlement Perc',
+			'offer_date' => 'Offer Date',
+			'offer_valid_until_date' => 'Offer Valid Until Date',
 			'type_of_debt' => 'Type Of Debt',
 			'amount_of_claim' => 'Amount Of Claim',
 			'days_behind' => 'Days Behind',
@@ -105,6 +115,11 @@ class Claims extends CActiveRecord
 		$criteria->compare('Fk_creditor_id',$this->Fk_creditor_id);
 		$criteria->compare('file_number',$this->file_number,true);
 		$criteria->compare('account_number',$this->account_number,true);
+		$criteria->compare('status',$this->status);
+		$criteria->compare('current_settlement_offer',$this->current_settlement_offer);
+		$criteria->compare('current_settlement_perc',$this->current_settlement_perc);
+		$criteria->compare('offer_date',$this->offer_date,true);
+		$criteria->compare('offer_valid_until_date',$this->offer_valid_until_date,true);
 		$criteria->compare('type_of_debt',$this->type_of_debt,true);
 		$criteria->compare('amount_of_claim',$this->amount_of_claim);
 		$criteria->compare('days_behind',$this->days_behind);

@@ -42,13 +42,12 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
 	'columns'=>array(
-		'id',
+		/*'id',
 		'debtor_id',
 		'creditor_id',
-		'negotiator_id',
+		'negotiator_id',*/
 		'file_number',
 		'offer_date',
-		/*
 		'offer_amount',
 		'offer_amount_percentage',
 		'client_saving_amonut',
@@ -58,11 +57,11 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 		'difference_amount',
 		'offer_status',
 		'valid_date',
-		'created_at',
+		/*'created_at',
 		'updated_at',
-		*/
+		
 		array(
 			'class'=>'CButtonColumn',
-		),
+		),*/
 	),
 )); ?>

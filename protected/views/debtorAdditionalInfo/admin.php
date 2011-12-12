@@ -42,13 +42,12 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
 	'columns'=>array(
-		'id',
+		/*'id',*/
 		'spouse_firstname',
 		'spouse_lastname',
 		'spouse_address',
 		'spouse_marital_status',
 		'spouse_monthly_income',
-		/*
 		'spouse_gross_monthly_income',
 		'spouse_employment_status',
 		'spouse_employer',
@@ -57,12 +56,12 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 		'spouse_number_of_children',
 		'spouse_drivers_licence',
 		'spouse_active_duty',
-		'comments',
+		/*'comments',
 		'created_at',
 		'updated_at',
-		*/
+		
 		array(
 			'class'=>'CButtonColumn',
-		),
+		),*/
 	),
 )); ?>

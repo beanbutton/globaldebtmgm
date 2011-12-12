@@ -10,33 +10,24 @@
 	<?php echo $form->errorSummary($model); ?>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'debtor_id'); ?>
-		<?php echo $form->textField($model,'debtor_id'); ?>
-		<?php echo $form->error($model,'debtor_id'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'creditor_id'); ?>
-		<?php echo $form->textField($model,'creditor_id'); ?>
-		<?php echo $form->error($model,'creditor_id'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'negotiator_id'); ?>
-		<?php echo $form->textField($model,'negotiator_id'); ?>
-		<?php echo $form->error($model,'negotiator_id'); ?>
-	</div>
-
-	<div class="row">
 		<?php echo $form->labelEx($model,'file_number'); ?>
-		<?php echo $form->textField($model,'file_number',array('size'=>60,'maxlength'=>255)); ?>
+		<?php echo $form->textField($model,'file_number'); ?>
 		<?php echo $form->error($model,'file_number'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'offer_date'); ?>
 		<?php echo $form->textField($model,'offer_date'); ?>
-		<?php echo $form->error($model,'offer_date'); ?>
+		<?php echo CHtml::image("images/calendar_btn.jpg","calendar",
+                array("id"=>"c_button1","class"=>"pointer")); ?>
+                    <?php $this->widget('application.extensions.calendar.SCalendar',
+                        array(
+                        'inputField'=>'SettlementOffer_offer_date',
+                        'button'=>'c_button1',
+                        'ifFormat'=>'%Y-%m-%d',
+                    ));
+                  ?>
+                <?php echo $form->error($model,'offer_date'); ?>
 	</div>
 
 	<div class="row">
@@ -90,19 +81,16 @@
 	<div class="row">
 		<?php echo $form->labelEx($model,'valid_date'); ?>
 		<?php echo $form->textField($model,'valid_date'); ?>
+                <?php echo CHtml::image("images/calendar_btn.jpg","calendar",
+                array("id"=>"c_button2","class"=>"pointer")); ?>
+                    <?php $this->widget('application.extensions.calendar.SCalendar',
+                        array(
+                        'inputField'=>'SettlementOffer_valid_date',
+                        'button'=>'c_button2',
+                        'ifFormat'=>'%Y-%m-%d',
+                    ));
+                  ?>
 		<?php echo $form->error($model,'valid_date'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'created_at'); ?>
-		<?php echo $form->textField($model,'created_at'); ?>
-		<?php echo $form->error($model,'created_at'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'updated_at'); ?>
-		<?php echo $form->textField($model,'updated_at'); ?>
-		<?php echo $form->error($model,'updated_at'); ?>
 	</div>
 
 	<div class="row buttons">

@@ -65,6 +65,24 @@ div.form .row
 	margin: 5px 0;
 }
 
+div.form .col
+{
+	width: 25%;
+	display: inline;
+	float: left;
+	margin-left: 2%;
+	margin-right: 2%;
+}
+
+div.form .75
+{
+	width: 75%;
+	display: inline;
+	float: left;
+	margin-left: 2%;
+	margin-right: 2%;
+}
+
 div.form .hint
 {
 	margin: 0;

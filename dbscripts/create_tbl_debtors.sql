@@ -45,37 +45,38 @@ create table tbl_debtor
     file_number varchar(255), index( file_number),
     firstname varchar(255), index( firstname),
     lastname varchar(255), index( lastname),
-    date_of_birth datetime,
     address varchar(255), index( address ),
     
+	date_of_birth datetime,
     social_insurance_number varchar(255), index( social_insurance_number),
-    credit_card_number varchar(255), index(credit_card_number),
-    drivers_licence varchar(255),
-    
-    correspondence_language int,
-    date_filed_chapter11 datetime,
+    date_filed_chapter7 datetime,
     date_filed_chapter13 datetime,
-    
-    
+        
     home_telephone varchar(255),
     mobile_telephone varchar(255),
     other_telephone varchar(255),
     best_time_to_call varchar(255),
     faxnumber varchar(255),
+    email varchar(255),
+	
+    drivers_licence varchar(255),
+    credit_card_number varchar(255), index(credit_card_number),
+    	
+	employment_status int(11),
     
-    employment_status int(11),
+	employer varchar(255),
     employment_occupation varchar(255),
-
-    employer varchar(255),
-    employment_work_years int,
+	employment_work_years int,
     employment_telephone varchar(255),
     
     employment_insurance int,
     employment_disability int,
     pension int,
+    	
+    correspondence_language int,
     
     comments varchar(255),
     
-    created_at timestamp, 
-    updated_at timestamp
+    created_at datetime NOT NULL,
+    updated_at datetime NOT NULL
 );

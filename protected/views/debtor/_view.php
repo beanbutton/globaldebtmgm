@@ -41,6 +41,10 @@
 	<?php echo CHtml::encode($data->Fk_client_progress_id); ?>
 	<br />
 
+	<b><?php echo CHtml::encode($data->getAttributeLabel('file_number')); ?>:</b>
+	<?php echo CHtml::encode($data->file_number); ?>
+	<br />
+
 	<b><?php echo CHtml::encode($data->getAttributeLabel('firstname')); ?>:</b>
 	<?php echo CHtml::encode($data->firstname); ?>
 	<br />
@@ -49,32 +53,20 @@
 	<?php echo CHtml::encode($data->lastname); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('date_of_birth')); ?>:</b>
-	<?php echo CHtml::encode($data->date_of_birth); ?>
-	<br />
-
 	<b><?php echo CHtml::encode($data->getAttributeLabel('address')); ?>:</b>
 	<?php echo CHtml::encode($data->address); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('date_of_birth')); ?>:</b>
+	<?php echo CHtml::encode($data->date_of_birth); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('social_insurance_number')); ?>:</b>
 	<?php echo CHtml::encode($data->social_insurance_number); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('credit_card_number')); ?>:</b>
-	<?php echo CHtml::encode($data->credit_card_number); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('drivers_licence')); ?>:</b>
-	<?php echo CHtml::encode($data->drivers_licence); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('correspondence_language')); ?>:</b>
-	<?php echo CHtml::encode($data->correspondence_language); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('date_filed_chapter11')); ?>:</b>
-	<?php echo CHtml::encode($data->date_filed_chapter11); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('date_filed_chapter7')); ?>:</b>
+	<?php echo CHtml::encode($data->date_filed_chapter7); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('date_filed_chapter13')); ?>:</b>
@@ -101,16 +93,28 @@
 	<?php echo CHtml::encode($data->faxnumber); ?>
 	<br />
 
+	<b><?php echo CHtml::encode($data->getAttributeLabel('email')); ?>:</b>
+	<?php echo CHtml::encode($data->email); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('drivers_licence')); ?>:</b>
+	<?php echo CHtml::encode($data->drivers_licence); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('credit_card_number')); ?>:</b>
+	<?php echo CHtml::encode($data->credit_card_number); ?>
+	<br />
+
 	<b><?php echo CHtml::encode($data->getAttributeLabel('employment_status')); ?>:</b>
 	<?php echo CHtml::encode($data->employment_status); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('employment_occupation')); ?>:</b>
-	<?php echo CHtml::encode($data->employment_occupation); ?>
-	<br />
-
 	<b><?php echo CHtml::encode($data->getAttributeLabel('employer')); ?>:</b>
 	<?php echo CHtml::encode($data->employer); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('employment_occupation')); ?>:</b>
+	<?php echo CHtml::encode($data->employment_occupation); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('employment_work_years')); ?>:</b>
@@ -131,6 +135,10 @@
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('pension')); ?>:</b>
 	<?php echo CHtml::encode($data->pension); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('correspondence_language')); ?>:</b>
+	<?php echo CHtml::encode($data->correspondence_language); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('comments')); ?>:</b>

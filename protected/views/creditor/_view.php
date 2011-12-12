@@ -24,31 +24,11 @@
 	<?php echo CHtml::encode($data->faxnumber); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('status')); ?>:</b>
-	<?php echo CHtml::encode($data->status); ?>
-	<br />
-
-	<?php /*
-	<b><?php echo CHtml::encode($data->getAttributeLabel('current_settlement_offer')); ?>:</b>
-	<?php echo CHtml::encode($data->current_settlement_offer); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('current_settlement_perc')); ?>:</b>
-	<?php echo CHtml::encode($data->current_settlement_perc); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('offer_date')); ?>:</b>
-	<?php echo CHtml::encode($data->offer_date); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('offer_valid_until_date')); ?>:</b>
-	<?php echo CHtml::encode($data->offer_valid_until_date); ?>
-	<br />
-
 	<b><?php echo CHtml::encode($data->getAttributeLabel('created_at')); ?>:</b>
 	<?php echo CHtml::encode($data->created_at); ?>
 	<br />
 
+	<?php /*
 	<b><?php echo CHtml::encode($data->getAttributeLabel('updated_at')); ?>:</b>
 	<?php echo CHtml::encode($data->updated_at); ?>
 	<br />

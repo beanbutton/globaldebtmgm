@@ -10,11 +10,6 @@
  * @property string $telephone
  * @property string $email
  * @property string $faxnumber
- * @property integer $status
- * @property double $current_settlement_offer
- * @property double $current_settlement_perc
- * @property string $offer_date
- * @property string $offer_valid_until_date
  * @property string $created_at
  * @property string $updated_at
  */
@@ -46,13 +41,11 @@ class Creditor extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('created_at', 'required'),
-			array('status', 'numerical', 'integerOnly'=>true),
-			array('current_settlement_offer, current_settlement_perc', 'numerical'),
 			array('name, address, telephone, email, faxnumber', 'length', 'max'=>255),
-			array('offer_date, offer_valid_until_date, updated_at', 'safe'),
+			array('updated_at', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, name, address, telephone, email, faxnumber, status, current_settlement_offer, current_settlement_perc, offer_date, offer_valid_until_date, created_at, updated_at', 'safe', 'on'=>'search'),
+			array('id, name, address, telephone, email, faxnumber, created_at, updated_at', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -78,12 +71,7 @@ class Creditor extends CActiveRecord
 			'address' => 'Address',
 			'telephone' => 'Telephone',
 			'email' => 'Email',
-			'faxnumber' => 'Faxnumber',
-			'status' => 'Status',
-			'current_settlement_offer' => 'Current Settlement Offer',
-			'current_settlement_perc' => 'Current Settlement Perc',
-			'offer_date' => 'Offer Date',
-			'offer_valid_until_date' => 'Offer Valid Until Date',
+			'faxnumber' => 'Fax number',
 			'created_at' => 'Created At',
 			'updated_at' => 'Updated At',
 		);
@@ -106,11 +94,6 @@ class Creditor extends CActiveRecord
 		$criteria->compare('telephone',$this->telephone,true);
 		$criteria->compare('email',$this->email,true);
 		$criteria->compare('faxnumber',$this->faxnumber,true);
-		$criteria->compare('status',$this->status);
-		$criteria->compare('current_settlement_offer',$this->current_settlement_offer);
-		$criteria->compare('current_settlement_perc',$this->current_settlement_perc);
-		$criteria->compare('offer_date',$this->offer_date,true);
-		$criteria->compare('offer_valid_until_date',$this->offer_valid_until_date,true);
 		$criteria->compare('created_at',$this->created_at,true);
 		$criteria->compare('updated_at',$this->updated_at,true);
 

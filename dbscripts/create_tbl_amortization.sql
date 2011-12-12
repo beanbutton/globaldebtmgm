@@ -15,7 +15,7 @@ create table tbl_amortization
     total_maintenance_fee float,
     total_settlement_savings_fund float,
     
-    created_at timestamp, 
-    updated_at timestamp
+    created_at datetime NOT NULL,
+    updated_at datetime NOT NULL
     
 );

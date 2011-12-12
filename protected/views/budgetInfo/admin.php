@@ -42,31 +42,30 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
 	'columns'=>array(
-		'id',
-		'monthly_income',
-		'monthly_auto_expenses',
+		/*'id',*/
 		'monthly_auto_payments',
-		'monthly_utilites',
-		'monthly_grocery_expenses',
-		/*
-		'monthly_insurance_payments',
-		'rrsp',
 		'food_stamp_or_other',
-		'spouse_monthly_takehome_pay',
-		'reason_for_hardship',
-		'estimated_home_value',
-		'remaining_mortgage_balance',
 		'total_number_dependants',
+		'monthly_utilites',
+		'spouse_monthly_takehome_pay',
 		'household_expenses',
-		'total_debt_to_income_perc',
+		'monthly_auto_expenses',
+		'monthly_income',
+	        'total_debt_to_income_perc',
+                'monthly_grocery_expenses',
+		'reason_for_hardship',
 		'total_expenses_to_income_variance',
+		'monthly_insurance_payments',
+		'estimated_home_value',
 		'mortgage',
+		'rrsp',
+		'remaining_mortgage_balance',
 		'rent',
-		'created_at',
+		/*'created_at',
 		'updated_at',
-		*/
+		
 		array(
 			'class'=>'CButtonColumn',
-		),
+		),*/
 	),
 )); ?>

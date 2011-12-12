@@ -443,3 +443,57 @@ Stack trace:
 #18 C:\xampp\htdocs\YiiRoot\framework\base\CApplication.php(158): CWebApplication->processRequest()
 #19 C:\xampp\htdocs\globaldebtmgm\index.php(13): CApplication->run()
 #20 {main} REQUEST_URI=/globaldebtmgm/index.php?r=user/update&id=3
+2011/12/11 22:34:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "clients/create".' in C:\xampplite\htdocs\project\YiiRoot\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampplite\htdocs\project\YiiRoot\framework\web\CWebApplication.php(136): CWebApplication->runController('clients/create')
+#1 C:\xampplite\htdocs\project\YiiRoot\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampplite\htdocs\project\globaldebtmgm\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/index.php?r=clients/create
+2011/12/11 23:39:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "creditors/admin".' in C:\xampplite\htdocs\project\YiiRoot\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampplite\htdocs\project\YiiRoot\framework\web\CWebApplication.php(136): CWebApplication->runController('creditors/admin')
+#1 C:\xampplite\htdocs\project\YiiRoot\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampplite\htdocs\project\globaldebtmgm\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/index.php?r=creditors/admin
+2011/12/12 00:27:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "debtfinancialinfo".' in C:\xampplite\htdocs\project\YiiRoot\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampplite\htdocs\project\YiiRoot\framework\web\CWebApplication.php(136): CWebApplication->runController('debtfinancialin...')
+#1 C:\xampplite\htdocs\project\YiiRoot\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampplite\htdocs\project\globaldebtmgm\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/index.php?r=debtfinancialinfo
+2011/12/12 01:01:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "claim/admin".' in C:\xampplite\htdocs\project\YiiRoot\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampplite\htdocs\project\YiiRoot\framework\web\CWebApplication.php(136): CWebApplication->runController('claim/admin')
+#1 C:\xampplite\htdocs\project\YiiRoot\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampplite\htdocs\project\globaldebtmgm\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/index.php?r=claim/admin
+2011/12/12 01:05:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "additionalinfo/create".' in C:\xampplite\htdocs\project\YiiRoot\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampplite\htdocs\project\YiiRoot\framework\web\CWebApplication.php(136): CWebApplication->runController('additionalinfo/...')
+#1 C:\xampplite\htdocs\project\YiiRoot\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampplite\htdocs\project\globaldebtmgm\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/index.php?r=additionalinfo/create
+2011/12/12 07:49:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "claim//create".' in C:\xampplite\htdocs\project\YiiRoot\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampplite\htdocs\project\YiiRoot\framework\web\CWebApplication.php(136): CWebApplication->runController('claim//create')
+#1 C:\xampplite\htdocs\project\YiiRoot\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampplite\htdocs\project\globaldebtmgm\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/index.php?r=claim//create
+2011/12/12 07:49:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "claim/create".' in C:\xampplite\htdocs\project\YiiRoot\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampplite\htdocs\project\YiiRoot\framework\web\CWebApplication.php(136): CWebApplication->runController('claim/create')
+#1 C:\xampplite\htdocs\project\YiiRoot\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampplite\htdocs\project\globaldebtmgm\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/index.php?r=claim/create
+2011/12/12 07:49:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "claim/create".' in C:\xampplite\htdocs\project\YiiRoot\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampplite\htdocs\project\YiiRoot\framework\web\CWebApplication.php(136): CWebApplication->runController('claim/create')
+#1 C:\xampplite\htdocs\project\YiiRoot\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampplite\htdocs\project\globaldebtmgm\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/index.php?r=claim/create
+2011/12/12 07:49:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "claim//create".' in C:\xampplite\htdocs\project\YiiRoot\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampplite\htdocs\project\YiiRoot\framework\web\CWebApplication.php(136): CWebApplication->runController('claim//create')
+#1 C:\xampplite\htdocs\project\YiiRoot\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampplite\htdocs\project\globaldebtmgm\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/index.php?r=claim//create

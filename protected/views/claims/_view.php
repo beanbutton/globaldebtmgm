@@ -20,6 +20,27 @@
 	<?php echo CHtml::encode($data->account_number); ?>
 	<br />
 
+	<b><?php echo CHtml::encode($data->getAttributeLabel('status')); ?>:</b>
+	<?php echo CHtml::encode($data->status); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('current_settlement_offer')); ?>:</b>
+	<?php echo CHtml::encode($data->current_settlement_offer); ?>
+	<br />
+
+	<?php /*
+	<b><?php echo CHtml::encode($data->getAttributeLabel('current_settlement_perc')); ?>:</b>
+	<?php echo CHtml::encode($data->current_settlement_perc); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('offer_date')); ?>:</b>
+	<?php echo CHtml::encode($data->offer_date); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('offer_valid_until_date')); ?>:</b>
+	<?php echo CHtml::encode($data->offer_valid_until_date); ?>
+	<br />
+
 	<b><?php echo CHtml::encode($data->getAttributeLabel('type_of_debt')); ?>:</b>
 	<?php echo CHtml::encode($data->type_of_debt); ?>
 	<br />
@@ -28,7 +49,6 @@
 	<?php echo CHtml::encode($data->amount_of_claim); ?>
 	<br />
 
-	<?php /*
 	<b><?php echo CHtml::encode($data->getAttributeLabel('days_behind')); ?>:</b>
 	<?php echo CHtml::encode($data->days_behind); ?>
 	<br />
