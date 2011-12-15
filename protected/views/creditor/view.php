@@ -19,8 +19,10 @@ $this->menu=array(
 	'data'=>$model,
 	'attributes'=>array(
 		'id',
+		'Fk_debtor_id',
 		'name',
 		'address',
+		'postal_code',
 		'telephone',
 		'email',
 		'faxnumber',

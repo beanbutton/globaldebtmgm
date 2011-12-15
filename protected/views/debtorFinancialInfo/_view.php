@@ -24,11 +24,15 @@
 	<?php echo CHtml::encode($data->province); ?>
 	<br />
 
+	<b><?php echo CHtml::encode($data->getAttributeLabel('postal_code')); ?>:</b>
+	<?php echo CHtml::encode($data->postal_code); ?>
+	<br />
+
+	<?php /*
 	<b><?php echo CHtml::encode($data->getAttributeLabel('phone_number')); ?>:</b>
 	<?php echo CHtml::encode($data->phone_number); ?>
 	<br />
 
-	<?php /*
 	<b><?php echo CHtml::encode($data->getAttributeLabel('institution_numer')); ?>:</b>
 	<?php echo CHtml::encode($data->institution_numer); ?>
 	<br />

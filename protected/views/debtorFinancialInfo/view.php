@@ -24,6 +24,7 @@ $this->menu=array(
 		'branch_address',
 		'city',
 		'province',
+		'postal_code',
 		'phone_number',
 		'institution_numer',
 		'branch_number',

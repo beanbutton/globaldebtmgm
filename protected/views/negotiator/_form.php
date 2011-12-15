@@ -28,15 +28,15 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'email'); ?>
-		<?php echo $form->textField($model,'email',array('size'=>60,'maxlength'=>255)); ?>
-		<?php echo $form->error($model,'email'); ?>
-	</div>
-
-	<div class="row">
 		<?php echo $form->labelEx($model,'faxnumber'); ?>
 		<?php echo $form->textField($model,'faxnumber',array('size'=>60,'maxlength'=>255)); ?>
 		<?php echo $form->error($model,'faxnumber'); ?>
+	</div>
+
+        <div class="row">
+		<?php echo $form->labelEx($model,'email'); ?>
+		<?php echo $form->textField($model,'email',array('size'=>60,'maxlength'=>255)); ?>
+		<?php echo $form->error($model,'email'); ?>
 	</div>
 
 	<div class="row buttons">

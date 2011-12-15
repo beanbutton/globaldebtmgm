@@ -5,6 +5,7 @@
  *
  * The followings are the available columns in table 'tbl_negotiator':
  * @property integer $id
+ * @property integer $Fk_debtor_id
  * @property string $name
  * @property string $address
  * @property string $telephone
@@ -41,11 +42,12 @@ class Negotiator extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('created_at', 'required'),
+			array('Fk_debtor_id', 'numerical', 'integerOnly'=>true),
 			array('name, address, telephone, email, faxnumber', 'length', 'max'=>255),
 			array('updated_at', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, name, address, telephone, email, faxnumber, created_at, updated_at', 'safe', 'on'=>'search'),
+			array('id, Fk_debtor_id, name, address, telephone, email, faxnumber, created_at, updated_at', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -67,6 +69,7 @@ class Negotiator extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
+			'Fk_debtor_id' => 'Fk Debtor',
 			'name' => 'Name',
 			'address' => 'Address',
 			'telephone' => 'Telephone',
@@ -89,6 +92,7 @@ class Negotiator extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('id',$this->id);
+		$criteria->compare('Fk_debtor_id',$this->Fk_debtor_id);
 		$criteria->compare('name',$this->name,true);
 		$criteria->compare('address',$this->address,true);
 		$criteria->compare('telephone',$this->telephone,true);

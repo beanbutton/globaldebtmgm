@@ -36,6 +36,11 @@
 	</div>
 
 	<div class="row">
+		<?php echo $form->label($model,'postal_code'); ?>
+		<?php echo $form->textField($model,'postal_code',array('size'=>60,'maxlength'=>255)); ?>
+	</div>
+
+	<div class="row">
 		<?php echo $form->label($model,'phone_number'); ?>
 		<?php echo $form->textField($model,'phone_number',array('size'=>60,'maxlength'=>255)); ?>
 	</div>

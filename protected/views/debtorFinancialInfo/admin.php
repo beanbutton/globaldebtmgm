@@ -48,6 +48,7 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 		'branch_address',
 		'city',
 		'province',
+		'postal_code',
 		'phone_number',
 		'institution_numer',
 		'branch_number',

@@ -11,6 +11,11 @@
 	</div>
 
 	<div class="row">
+		<?php echo $form->label($model,'Fk_debtor_id'); ?>
+		<?php echo $form->textField($model,'Fk_debtor_id'); ?>
+	</div>
+
+	<div class="row">
 		<?php echo $form->label($model,'name'); ?>
 		<?php echo $form->textField($model,'name',array('size'=>60,'maxlength'=>255)); ?>
 	</div>

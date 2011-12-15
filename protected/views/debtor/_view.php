@@ -53,16 +53,32 @@
 	<?php echo CHtml::encode($data->lastname); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('address')); ?>:</b>
-	<?php echo CHtml::encode($data->address); ?>
-	<br />
-
 	<b><?php echo CHtml::encode($data->getAttributeLabel('date_of_birth')); ?>:</b>
 	<?php echo CHtml::encode($data->date_of_birth); ?>
 	<br />
 
+	<b><?php echo CHtml::encode($data->getAttributeLabel('address')); ?>:</b>
+	<?php echo CHtml::encode($data->address); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('postal_code')); ?>:</b>
+	<?php echo CHtml::encode($data->postal_code); ?>
+	<br />
+
 	<b><?php echo CHtml::encode($data->getAttributeLabel('social_insurance_number')); ?>:</b>
 	<?php echo CHtml::encode($data->social_insurance_number); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('credit_card_number')); ?>:</b>
+	<?php echo CHtml::encode($data->credit_card_number); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('drivers_licence')); ?>:</b>
+	<?php echo CHtml::encode($data->drivers_licence); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('correspondence_language')); ?>:</b>
+	<?php echo CHtml::encode($data->correspondence_language); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('date_filed_chapter7')); ?>:</b>
@@ -93,28 +109,16 @@
 	<?php echo CHtml::encode($data->faxnumber); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('email')); ?>:</b>
-	<?php echo CHtml::encode($data->email); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('drivers_licence')); ?>:</b>
-	<?php echo CHtml::encode($data->drivers_licence); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('credit_card_number')); ?>:</b>
-	<?php echo CHtml::encode($data->credit_card_number); ?>
-	<br />
-
 	<b><?php echo CHtml::encode($data->getAttributeLabel('employment_status')); ?>:</b>
 	<?php echo CHtml::encode($data->employment_status); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('employer')); ?>:</b>
-	<?php echo CHtml::encode($data->employer); ?>
-	<br />
-
 	<b><?php echo CHtml::encode($data->getAttributeLabel('employment_occupation')); ?>:</b>
 	<?php echo CHtml::encode($data->employment_occupation); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('employer')); ?>:</b>
+	<?php echo CHtml::encode($data->employer); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('employment_work_years')); ?>:</b>
@@ -137,12 +141,64 @@
 	<?php echo CHtml::encode($data->pension); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('correspondence_language')); ?>:</b>
-	<?php echo CHtml::encode($data->correspondence_language); ?>
-	<br />
-
 	<b><?php echo CHtml::encode($data->getAttributeLabel('comments')); ?>:</b>
 	<?php echo CHtml::encode($data->comments); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('spouse_firstname')); ?>:</b>
+	<?php echo CHtml::encode($data->spouse_firstname); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('spouse_lastname')); ?>:</b>
+	<?php echo CHtml::encode($data->spouse_lastname); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('spouse_address')); ?>:</b>
+	<?php echo CHtml::encode($data->spouse_address); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('spouse_marital_status')); ?>:</b>
+	<?php echo CHtml::encode($data->spouse_marital_status); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('spouse_monthly_income')); ?>:</b>
+	<?php echo CHtml::encode($data->spouse_monthly_income); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('spouse_gross_monthly_income')); ?>:</b>
+	<?php echo CHtml::encode($data->spouse_gross_monthly_income); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('spouse_employment_status')); ?>:</b>
+	<?php echo CHtml::encode($data->spouse_employment_status); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('spouse_employer')); ?>:</b>
+	<?php echo CHtml::encode($data->spouse_employer); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('spouse_employment_occupation')); ?>:</b>
+	<?php echo CHtml::encode($data->spouse_employment_occupation); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('spouse_employment_work_years')); ?>:</b>
+	<?php echo CHtml::encode($data->spouse_employment_work_years); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('spouse_number_of_children')); ?>:</b>
+	<?php echo CHtml::encode($data->spouse_number_of_children); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('spouse_drivers_licence')); ?>:</b>
+	<?php echo CHtml::encode($data->spouse_drivers_licence); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('spouse_active_duty')); ?>:</b>
+	<?php echo CHtml::encode($data->spouse_active_duty); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('spouse_comments')); ?>:</b>
+	<?php echo CHtml::encode($data->spouse_comments); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('created_at')); ?>:</b>

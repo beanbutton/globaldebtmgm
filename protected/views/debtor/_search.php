@@ -71,18 +71,38 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'address'); ?>
-		<?php echo $form->textField($model,'address',array('size'=>60,'maxlength'=>255)); ?>
-	</div>
-
-	<div class="row">
 		<?php echo $form->label($model,'date_of_birth'); ?>
 		<?php echo $form->textField($model,'date_of_birth'); ?>
 	</div>
 
 	<div class="row">
+		<?php echo $form->label($model,'address'); ?>
+		<?php echo $form->textField($model,'address',array('size'=>60,'maxlength'=>255)); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'postal_code'); ?>
+		<?php echo $form->textField($model,'postal_code',array('size'=>60,'maxlength'=>255)); ?>
+	</div>
+
+	<div class="row">
 		<?php echo $form->label($model,'social_insurance_number'); ?>
 		<?php echo $form->textField($model,'social_insurance_number',array('size'=>60,'maxlength'=>255)); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'credit_card_number'); ?>
+		<?php echo $form->textField($model,'credit_card_number',array('size'=>60,'maxlength'=>255)); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'drivers_licence'); ?>
+		<?php echo $form->textField($model,'drivers_licence',array('size'=>60,'maxlength'=>255)); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'correspondence_language'); ?>
+		<?php echo $form->textField($model,'correspondence_language'); ?>
 	</div>
 
 	<div class="row">
@@ -121,33 +141,18 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'email'); ?>
-		<?php echo $form->textField($model,'email',array('size'=>60,'maxlength'=>255)); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->label($model,'drivers_licence'); ?>
-		<?php echo $form->textField($model,'drivers_licence',array('size'=>60,'maxlength'=>255)); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->label($model,'credit_card_number'); ?>
-		<?php echo $form->textField($model,'credit_card_number',array('size'=>60,'maxlength'=>255)); ?>
-	</div>
-
-	<div class="row">
 		<?php echo $form->label($model,'employment_status'); ?>
 		<?php echo $form->textField($model,'employment_status'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'employer'); ?>
-		<?php echo $form->textField($model,'employer',array('size'=>60,'maxlength'=>255)); ?>
+		<?php echo $form->label($model,'employment_occupation'); ?>
+		<?php echo $form->textField($model,'employment_occupation',array('size'=>60,'maxlength'=>255)); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'employment_occupation'); ?>
-		<?php echo $form->textField($model,'employment_occupation',array('size'=>60,'maxlength'=>255)); ?>
+		<?php echo $form->label($model,'employer'); ?>
+		<?php echo $form->textField($model,'employer',array('size'=>60,'maxlength'=>255)); ?>
 	</div>
 
 	<div class="row">
@@ -176,13 +181,78 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'correspondence_language'); ?>
-		<?php echo $form->textField($model,'correspondence_language'); ?>
+		<?php echo $form->label($model,'comments'); ?>
+		<?php echo $form->textField($model,'comments',array('size'=>60,'maxlength'=>255)); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'comments'); ?>
-		<?php echo $form->textField($model,'comments',array('size'=>60,'maxlength'=>255)); ?>
+		<?php echo $form->label($model,'spouse_firstname'); ?>
+		<?php echo $form->textField($model,'spouse_firstname',array('size'=>60,'maxlength'=>255)); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'spouse_lastname'); ?>
+		<?php echo $form->textField($model,'spouse_lastname',array('size'=>60,'maxlength'=>255)); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'spouse_address'); ?>
+		<?php echo $form->textField($model,'spouse_address',array('size'=>60,'maxlength'=>255)); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'spouse_marital_status'); ?>
+		<?php echo $form->textField($model,'spouse_marital_status'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'spouse_monthly_income'); ?>
+		<?php echo $form->textField($model,'spouse_monthly_income'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'spouse_gross_monthly_income'); ?>
+		<?php echo $form->textField($model,'spouse_gross_monthly_income'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'spouse_employment_status'); ?>
+		<?php echo $form->textField($model,'spouse_employment_status'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'spouse_employer'); ?>
+		<?php echo $form->textField($model,'spouse_employer',array('size'=>60,'maxlength'=>255)); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'spouse_employment_occupation'); ?>
+		<?php echo $form->textField($model,'spouse_employment_occupation',array('size'=>60,'maxlength'=>255)); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'spouse_employment_work_years'); ?>
+		<?php echo $form->textField($model,'spouse_employment_work_years'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'spouse_number_of_children'); ?>
+		<?php echo $form->textField($model,'spouse_number_of_children'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'spouse_drivers_licence'); ?>
+		<?php echo $form->textField($model,'spouse_drivers_licence',array('size'=>60,'maxlength'=>255)); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'spouse_active_duty'); ?>
+		<?php echo $form->textField($model,'spouse_active_duty'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'spouse_comments'); ?>
+		<?php echo $form->textField($model,'spouse_comments',array('size'=>60,'maxlength'=>255)); ?>
 	</div>
 
 	<div class="row">

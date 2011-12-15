@@ -10,6 +10,7 @@
  * @property string $branch_address
  * @property string $city
  * @property string $province
+ * @property string $postal_code
  * @property string $phone_number
  * @property string $institution_numer
  * @property string $branch_number
@@ -46,11 +47,11 @@ class DebtorFinancialInfo extends CActiveRecord
 		return array(
 			array('created_at', 'required'),
 			array('Fk_debtor_id', 'numerical', 'integerOnly'=>true),
-			array('name_financial_institution, branch_address, city, province, phone_number, institution_numer, branch_number, account_number', 'length', 'max'=>255),
+			array('name_financial_institution, branch_address, city, province, postal_code, phone_number, institution_numer, branch_number, account_number', 'length', 'max'=>255),
 			array('updated_at', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, Fk_debtor_id, name_financial_institution, branch_address, city, province, phone_number, institution_numer, branch_number, account_number, created_at, updated_at', 'safe', 'on'=>'search'),
+			array('id, Fk_debtor_id, name_financial_institution, branch_address, city, province, postal_code, phone_number, institution_numer, branch_number, account_number, created_at, updated_at', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -77,6 +78,7 @@ class DebtorFinancialInfo extends CActiveRecord
 			'branch_address' => 'Branch Address',
 			'city' => 'City',
 			'province' => 'Province',
+			'postal_code' => 'Postal Code',
 			'phone_number' => 'Phone Number',
 			'institution_numer' => 'Institution Numer',
 			'branch_number' => 'Branch Number',
@@ -103,6 +105,7 @@ class DebtorFinancialInfo extends CActiveRecord
 		$criteria->compare('branch_address',$this->branch_address,true);
 		$criteria->compare('city',$this->city,true);
 		$criteria->compare('province',$this->province,true);
+		$criteria->compare('postal_code',$this->postal_code,true);
 		$criteria->compare('phone_number',$this->phone_number,true);
 		$criteria->compare('institution_numer',$this->institution_numer,true);
 		$criteria->compare('branch_number',$this->branch_number,true);

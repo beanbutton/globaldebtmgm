@@ -497,3 +497,29 @@ Stack trace:
 #1 C:\xampplite\htdocs\project\YiiRoot\framework\base\CApplication.php(158): CWebApplication->processRequest()
 #2 C:\xampplite\htdocs\project\globaldebtmgm\index.php(13): CApplication->run()
 #3 {main} REQUEST_URI=/index.php?r=claim//create
+2011/12/12 18:55:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "debtoradditonalinfo/create".' in C:\xampplite\htdocs\project\YiiRoot\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampplite\htdocs\project\YiiRoot\framework\web\CWebApplication.php(136): CWebApplication->runController('debtoradditonal...')
+#1 C:\xampplite\htdocs\project\YiiRoot\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampplite\htdocs\project\globaldebtmgm\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/index.php?r=debtoradditonalinfo/create
+2011/12/12 23:31:05 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'globaldebtmgm.debtorsettlementoffer' doesn't exist. The SQL statement executed was: SHOW COLUMNS FROM `DebtorSettlementOffer`.
+in C:\xampplite\htdocs\project\globaldebtmgm\index.php (13)
+2011/12/13 08:51:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "settlmentoffer/admin".' in C:\xampplite\htdocs\project\YiiRoot\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampplite\htdocs\project\YiiRoot\framework\web\CWebApplication.php(136): CWebApplication->runController('settlmentoffer/...')
+#1 C:\xampplite\htdocs\project\YiiRoot\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampplite\htdocs\project\globaldebtmgm\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/index.php?r=settlmentoffer/admin
+2011/12/13 08:51:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "settlementoffer/admin".' in C:\xampplite\htdocs\project\YiiRoot\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampplite\htdocs\project\YiiRoot\framework\web\CWebApplication.php(136): CWebApplication->runController('settlementoffer...')
+#1 C:\xampplite\htdocs\project\YiiRoot\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampplite\htdocs\project\globaldebtmgm\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/index.php?r=settlementoffer/admin
+2011/12/14 00:49:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "debtfinancialinfo/create".' in C:\xampplite\htdocs\project\YiiRoot\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampplite\htdocs\project\YiiRoot\framework\web\CWebApplication.php(136): CWebApplication->runController('debtfinancialin...')
+#1 C:\xampplite\htdocs\project\YiiRoot\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampplite\htdocs\project\globaldebtmgm\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/index.php?r=debtfinancialinfo/create

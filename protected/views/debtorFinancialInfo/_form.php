@@ -34,6 +34,12 @@
 	</div>
 
 	<div class="row">
+		<?php echo $form->labelEx($model,'postal_code'); ?>
+		<?php echo $form->textField($model,'postal_code',array('size'=>60,'maxlength'=>255)); ?>
+		<?php echo $form->error($model,'postal_code'); ?>
+	</div>
+
+	<div class="row">
 		<?php echo $form->labelEx($model,'phone_number'); ?>
 		<?php echo $form->textField($model,'phone_number',array('size'=>60,'maxlength'=>255)); ?>
 		<?php echo $form->error($model,'phone_number'); ?>

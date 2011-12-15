@@ -22,21 +22,27 @@
 	</div>
 
 	<div class="row">
+		<?php echo $form->labelEx($model,'postal_code'); ?>
+		<?php echo $form->textField($model,'postal_code',array('size'=>60,'maxlength'=>255)); ?>
+		<?php echo $form->error($model,'postal_code'); ?>
+	</div>
+
+	<div class="row">
 		<?php echo $form->labelEx($model,'telephone'); ?>
 		<?php echo $form->textField($model,'telephone',array('size'=>60,'maxlength'=>255)); ?>
 		<?php echo $form->error($model,'telephone'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'email'); ?>
-		<?php echo $form->textField($model,'email',array('size'=>60,'maxlength'=>255)); ?>
-		<?php echo $form->error($model,'email'); ?>
-	</div>
-
-	<div class="row">
 		<?php echo $form->labelEx($model,'faxnumber'); ?>
 		<?php echo $form->textField($model,'faxnumber',array('size'=>60,'maxlength'=>255)); ?>
 		<?php echo $form->error($model,'faxnumber'); ?>
+	</div>
+
+        <div class="row">
+		<?php echo $form->labelEx($model,'email'); ?>
+		<?php echo $form->textField($model,'email',array('size'=>60,'maxlength'=>255)); ?>
+		<?php echo $form->error($model,'email'); ?>
 	</div>
 
 	<div class="row buttons">

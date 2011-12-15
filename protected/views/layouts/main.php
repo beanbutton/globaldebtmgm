@@ -24,19 +24,26 @@
 	<div id="header">
 		<div id="logo"><?php echo CHtml::encode(Yii::app()->name); ?></div>
 	</div><!-- header -->
-
-	<div id="mainmenu">
-		<?php $this->widget('zii.widgets.CMenu',array(
-			'items'=>array(
-				array('label'=>'Home', 'url'=>array('/site/index')),
-				array('label'=>'Debtors', 'url'=>array('/debtor')),
-				array('label'=>'Creditors', 'url'=>array('/creditor')),
-				array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
-				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
-			
-                        ),
-		)); ?>
-	</div><!-- mainmenu -->
+        <!--mainmenu-->
+	        
+         <?php $this->widget('application.extensions.mbmenu.MbMenu',array( 
+            'items'=>array( 
+                array('label'=>'Home', 'url'=>array('/site/index')), 
+                array('label'=>'Debtors', 'url'=>array('/debtor')),
+                array('label'=>'Creditors', 'url'=>array('/creditor')),
+                array('label'=>'Admin', 'url'=>array('/user/create'), 
+                  'items'=>array( 
+                    array('label'=>'Create User', 'url'=>array('/site/index')), 
+                    array('label'=>'sub 2 contact', 'url'=>array('/site/index')), 
+                  ), 
+                ),
+                array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
+		array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
+		
+            ), 
+        )); ?> 
+	
+        <!-- mainmenu -->
 	<?php if(isset($this->breadcrumbs)):?>
 		<?php $this->widget('zii.widgets.CBreadcrumbs', array(
 			'links'=>$this->breadcrumbs,

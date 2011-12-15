@@ -12,7 +12,22 @@
 	<div class="row">
 		<?php echo $form->labelEx($model,'payment_date'); ?>
 		<?php echo $form->textField($model,'payment_date'); ?>
+                <?php echo CHtml::image("images/calendar_btn.jpg","calendar",
+                array("id"=>"c_button1","class"=>"pointer")); ?>
+                <?php $this->widget('application.extensions.calendar.SCalendar',
+                    array(
+                    'inputField'=>'Amortization_payment_date',
+                    'button'=>'c_button1',
+                    'ifFormat'=>'%Y-%m-%d',
+                ));
+                ?>
 		<?php echo $form->error($model,'payment_date'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'total_monthly_cost'); ?>
+		<?php echo $form->textField($model,'total_monthly_cost'); ?>
+		<?php echo $form->error($model,'total_monthly_cost'); ?>
 	</div>
 
 	<div class="row">

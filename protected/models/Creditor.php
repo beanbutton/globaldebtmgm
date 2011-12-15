@@ -5,8 +5,10 @@
  *
  * The followings are the available columns in table 'tbl_creditor':
  * @property integer $id
+ * @property integer $Fk_debtor_id
  * @property string $name
  * @property string $address
+ * @property string $postal_code
  * @property string $telephone
  * @property string $email
  * @property string $faxnumber
@@ -41,11 +43,12 @@ class Creditor extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('created_at', 'required'),
-			array('name, address, telephone, email, faxnumber', 'length', 'max'=>255),
+			array('Fk_debtor_id', 'numerical', 'integerOnly'=>true),
+			array('name, address, postal_code, telephone, email, faxnumber', 'length', 'max'=>255),
 			array('updated_at', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, name, address, telephone, email, faxnumber, created_at, updated_at', 'safe', 'on'=>'search'),
+			array('id, Fk_debtor_id, name, address, postal_code, telephone, email, faxnumber, created_at, updated_at', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -67,11 +70,13 @@ class Creditor extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
+			'Fk_debtor_id' => 'Fk Debtor',
 			'name' => 'Name',
 			'address' => 'Address',
+			'postal_code' => 'Postal Code',
 			'telephone' => 'Telephone',
 			'email' => 'Email',
-			'faxnumber' => 'Fax number',
+			'faxnumber' => 'Faxnumber',
 			'created_at' => 'Created At',
 			'updated_at' => 'Updated At',
 		);
@@ -89,8 +94,10 @@ class Creditor extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('id',$this->id);
+		$criteria->compare('Fk_debtor_id',$this->Fk_debtor_id);
 		$criteria->compare('name',$this->name,true);
 		$criteria->compare('address',$this->address,true);
+		$criteria->compare('postal_code',$this->postal_code,true);
 		$criteria->compare('telephone',$this->telephone,true);
 		$criteria->compare('email',$this->email,true);
 		$criteria->compare('faxnumber',$this->faxnumber,true);

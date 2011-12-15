@@ -74,14 +74,9 @@ div.form .col
 	margin-right: 2%;
 }
 
-div.form .75
-{
-	width: 75%;
-	display: inline;
-	float: left;
-	margin-left: 2%;
-	margin-right: 2%;
-}
+div.col_left{float:left;}
+
+div.col_right{float: right;}
 
 div.form .hint
 {
