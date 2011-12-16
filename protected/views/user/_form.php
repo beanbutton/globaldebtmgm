@@ -11,8 +11,8 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'role'); ?>
-		<?php echo $form->textField($model,'role'); ?>
-		<?php echo $form->error($model,'role'); ?>
+		<?php echo $form->dropDownList($model, 'role', array('1' => 'Employmee', '2' => 'Client')); ?>
+                <?php echo $form->error($model,'role'); ?>
 	</div>
 
 	<div class="row">

@@ -8,8 +8,13 @@
 	<p class="note">Fields with <span class="required">*</span> are required.</p>
 
 	<?php echo $form->errorSummary($model); ?>
-
-	<div class="col">
+        
+    <!-- Tabs -->
+    <?php $this->beginWidget('application.extensions.jui.ETabs', array('name'=>'tabpanel1')); ?>
+    <?php $this->beginWidget('application.extensions.jui.ETab', array('name'=>'tab1', 'title'=>'Debtor Info')); ?>
+    <p>
+    <h5>Debtor Information</h5>
+        <div class="col">
 		<?php echo $form->labelEx($model,'file_number'); ?>
 		<?php echo $form->textField($model,'file_number'); ?>
 		<?php echo $form->error($model,'file_number'); ?>
@@ -191,8 +196,13 @@
 		<?php echo $form->textField($model,'comments'); ?>
 		<?php echo $form->error($model,'comments'); ?>
 	</div>
-
-	<div class="col">
+    <em style="font-size: 10px">*Continue to fill up information to Spouse Page</em>
+    </p>
+    <?php $this->endWidget('application.extensions.jui.ETab'); ?>
+    <?php $this->beginWidget('application.extensions.jui.ETab', array('name'=>'tab2', 'title'=>'Spouse Info')); ?>
+    <p>
+        <h5>Debtor Information</h5>
+        <div class="col">
 		<?php echo $form->labelEx($model,'spouse_firstname'); ?>
 		<?php echo $form->textField($model,'spouse_firstname'); ?>
 		<?php echo $form->error($model,'spouse_firstname'); ?>
@@ -275,8 +285,13 @@
 		<?php echo $form->textField($model,'spouse_comments'); ?>
 		<?php echo $form->error($model,'spouse_comments'); ?>
 	</div>
-
-	<div class="row buttons">
+    <em style="font-size: 10px">*Please click create button</em>
+    </p>
+    <?php $this->endWidget('application.extensions.jui.ETab'); ?>
+    <?php $this->endWidget('application.extensions.jui.ETabs'); ?>
+    <!-- End tab -->
+	
+	<div class="col buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
 	</div>
 

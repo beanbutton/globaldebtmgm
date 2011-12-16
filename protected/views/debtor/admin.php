@@ -55,9 +55,9 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 		'file_number',
 		'firstname',
 		'lastname',
-		'date_of_birth',
+		/*'date_of_birth',
 		'address',
-		'postal_code',
+		'postal_code',*/
 		'social_insurance_number',
 		'credit_card_number',
 		'drivers_licence',
@@ -66,7 +66,7 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 		'date_filed_chapter13',
 		'home_telephone',
 		'mobile_telephone',
-		'other_telephone',
+		/*'other_telephone',
 		'best_time_to_call',
 		'faxnumber',
 		'employment_status',
@@ -91,12 +91,12 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 		'spouse_number_of_children',
 		'spouse_drivers_licence',
 		'spouse_active_duty',
-		'spouse_comments',
+		'spouse_comments',*/
 		/*'created_at',
-		'updated_at',
+		'updated_at',*/
 		
 		array(
 			'class'=>'CButtonColumn',
-		),*/
+		),
 	),
 )); ?>

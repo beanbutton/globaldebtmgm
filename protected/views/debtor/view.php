@@ -18,7 +18,7 @@ $this->menu=array(
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
 	'attributes'=>array(
-		'id',
+		/*'id',
 		'Fk_client_id',
 		'Fk_debtor_additional_info_id',
 		'Fk_creditor_id',
@@ -27,7 +27,7 @@ $this->menu=array(
 		'Fk_program_info_id',
 		'Fk_amortization_id',
 		'Fk_settlement_offer_id',
-		'Fk_client_progress_id',
+		'Fk_client_progress_id',*/
 		'file_number',
 		'firstname',
 		'lastname',

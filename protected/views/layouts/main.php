@@ -29,18 +29,36 @@
          <?php $this->widget('application.extensions.mbmenu.MbMenu',array( 
             'items'=>array( 
                 array('label'=>'Home', 'url'=>array('/site/index')), 
-                array('label'=>'Debtors', 'url'=>array('/debtor')),
+                array('label'=>'Client', 'url'=>array('/client/admin')), 
+                array('label'=>'Debtors',
+                  'items'=>array(
+                     array('label'=>'Debtors Info',
+                      'items'=>array(
+                        array('label'=>'Create User', 'url'=>array('/debtor/create')),
+                        array('label'=>'List Debtors', 'url'=>array('/debtor/admin')),
+                          ),
+                        ),
+                     array('label'=>'Debtor Progress', 'url'=>array('/debtorProgress/admin')),
+                     array('label'=>'Financial Info', 'url'=>array('/debtorFinancialInfo/admin')),
+                     array('label'=>'Budget Info', 'url'=>array('/debtorBudgetInfo/admin')),
+                     array('label'=>'Program Info', 'url'=>array('/debtorProgramInfo/admin')),
+                     array('label'=>'Amortization', 'url'=>array('/amortization/admin')),
+                     array('label'=>'Settlement Offer', 'url'=>array('/debtorSettlementOffer/admin')),
+                   ),
+                  ),
                 array('label'=>'Creditors', 'url'=>array('/creditor')),
                 array('label'=>'Admin', 'url'=>array('/user/create'), 
                   'items'=>array( 
-                    array('label'=>'Create User', 'url'=>array('/site/index')), 
-                    array('label'=>'sub 2 contact', 'url'=>array('/site/index')), 
+                    array('label'=>'Reports', 'url'=>array('/user/create')), 
+                    array('label'=>'Add User', 'url'=>array('/user/create')), 
+                    array('label'=>'Change Password', 'url'=>array('/user/list')), 
                   ), 
                 ),
                 array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
 		array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
 		
-            ), 
+            ),  
+             
         )); ?> 
 	
         <!-- mainmenu -->
