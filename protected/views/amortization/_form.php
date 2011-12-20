@@ -10,18 +10,35 @@
 	<?php echo $form->errorSummary($model); ?>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'payment_date'); ?>
-		<?php echo $form->textField($model,'payment_date'); ?>
+		<?php echo $form->labelEx($model,'payment_start_date'); ?>
+		<?php echo $form->textField($model,'payment_start_date'); ?>
                 <?php echo CHtml::image("images/calendar_btn.jpg","calendar",
                 array("id"=>"c_button1","class"=>"pointer")); ?>
                 <?php $this->widget('application.extensions.calendar.SCalendar',
                     array(
-                    'inputField'=>'Amortization_payment_date',
+                    'inputField'=>'Amortization_payment_start_date',
                     'button'=>'c_button1',
                     'ifFormat'=>'%Y-%m-%d',
                 ));
                 ?>
-		<?php echo $form->error($model,'payment_date'); ?>
+
+		<?php echo $form->error($model,'payment_start_date'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'payment_end_date'); ?>
+		<?php echo $form->textField($model,'payment_end_date'); ?>
+                <?php echo CHtml::image("images/calendar_btn.jpg","calendar",
+                array("id"=>"c_button2","class"=>"pointer")); ?>
+                <?php $this->widget('application.extensions.calendar.SCalendar',
+                    array(
+                    'inputField'=>'Amortization_payment_end_date',
+                    'button'=>'c_button2',
+                    'ifFormat'=>'%Y-%m-%d',
+                ));
+                ?>
+
+		<?php echo $form->error($model,'payment_end_date'); ?>
 	</div>
 
 	<div class="row">

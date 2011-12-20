@@ -25,10 +25,7 @@ $('.search-form form').submit(function(){
 
 <h1>Manage Debtors</h1>
 
-<p>
-You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
-or <b>=</b>) at the beginning of each of your search values to specify how the comparison should be done.
-</p>
+<br></br>
 
 <?php echo CHtml::link('Advanced Search','#',array('class'=>'search-button')); ?>
 <div class="search-form" style="display:none">
@@ -43,6 +40,7 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 	'filter'=>$model,
 	'columns'=>array(
 		/*'id',
+		'Fk_user_id',
 		'Fk_client_id',
 		'Fk_debtor_additional_info_id',
 		'Fk_creditor_id',
@@ -55,28 +53,27 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 		'file_number',
 		'firstname',
 		'lastname',
-		/*'date_of_birth',
 		'address',
-		'postal_code',*/
-		'social_insurance_number',
-		'credit_card_number',
 		'drivers_licence',
-		'correspondence_language',
+		'date_of_birth',
+		'social_insurance_number',
 		'date_filed_chapter7',
 		'date_filed_chapter13',
 		'home_telephone',
 		'mobile_telephone',
-		/*'other_telephone',
+		'other_telephone',
 		'best_time_to_call',
 		'faxnumber',
+		'email',
 		'employment_status',
-		'employment_occupation',
 		'employer',
+		'employment_occupation',
 		'employment_work_years',
 		'employment_telephone',
 		'employment_insurance',
 		'employment_disability',
-		'pension',
+		'employee_pension',
+		'correspondence_language',
 		'comments',
 		'spouse_firstname',
 		'spouse_lastname',
@@ -91,10 +88,10 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 		'spouse_number_of_children',
 		'spouse_drivers_licence',
 		'spouse_active_duty',
-		'spouse_comments',*/
+		'spouse_comments',
 		/*'created_at',
-		'updated_at',*/
-		
+		'updated_at',
+		*/
 		array(
 			'class'=>'CButtonColumn',
 		),

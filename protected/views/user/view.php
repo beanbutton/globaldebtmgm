@@ -19,11 +19,10 @@ $this->menu=array(
 	'data'=>$model,
 	'attributes'=>array(
 		'id',
-		'role',
+		'Fk_role_id',
 		'username',
 		'password',
 		'salt',
-		'email',
 		'remember_me',
 		'created_at',
 		'updated_at',

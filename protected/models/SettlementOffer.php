@@ -5,9 +5,9 @@
  *
  * The followings are the available columns in table 'tbl_settlement_offer':
  * @property integer $id
- * @property integer $debtor_id
- * @property integer $creditor_id
- * @property integer $negotiator_id
+ * @property integer $Fk_debtor_id
+ * @property integer $Fk_creditor_id
+ * @property integer $Fk_negotiator_id
  * @property string $file_number
  * @property string $offer_date
  * @property double $offer_amount
@@ -19,6 +19,7 @@
  * @property double $difference_amount
  * @property integer $offer_status
  * @property string $valid_date
+ * @property string $comments
  * @property string $created_at
  * @property string $updated_at
  */
@@ -50,13 +51,13 @@ class SettlementOffer extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('created_at', 'required'),
-			array('debtor_id, creditor_id, negotiator_id, offer_status', 'numerical', 'integerOnly'=>true),
+			array('Fk_debtor_id, Fk_creditor_id, Fk_negotiator_id, offer_status', 'numerical', 'integerOnly'=>true),
 			array('offer_amount, offer_amount_percentage, client_saving_amonut, client_savings_percentage, client_reserves, service_fees, difference_amount', 'numerical'),
-			array('file_number', 'length', 'max'=>255),
+			array('file_number, comments', 'length', 'max'=>255),
 			array('offer_date, valid_date, updated_at', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, debtor_id, creditor_id, negotiator_id, file_number, offer_date, offer_amount, offer_amount_percentage, client_saving_amonut, client_savings_percentage, client_reserves, service_fees, difference_amount, offer_status, valid_date, created_at, updated_at', 'safe', 'on'=>'search'),
+			array('id, Fk_debtor_id, Fk_creditor_id, Fk_negotiator_id, file_number, offer_date, offer_amount, offer_amount_percentage, client_saving_amonut, client_savings_percentage, client_reserves, service_fees, difference_amount, offer_status, valid_date, comments, created_at, updated_at', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -78,20 +79,21 @@ class SettlementOffer extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'debtor_id' => 'Debtor',
-			'creditor_id' => 'Creditor',
-			'negotiator_id' => 'Negotiator',
+			'Fk_debtor_id' => 'Fk Debtor',
+			'Fk_creditor_id' => 'Fk Creditor',
+			'Fk_negotiator_id' => 'Fk Negotiator',
 			'file_number' => 'File Number',
 			'offer_date' => 'Offer Date',
-			'offer_amount' => 'Offer Amount',
-			'offer_amount_percentage' => 'Offer Amount Percentage',
-			'client_saving_amonut' => 'Client Saving Amonut',
-			'client_savings_percentage' => 'Client Savings Percentage',
-			'client_reserves' => 'Client Reserves',
-			'service_fees' => 'Service Fees',
-			'difference_amount' => 'Difference Amount',
+			'offer_amount' => 'Settlement Offer, $',
+			'offer_amount_percentage' => 'Settlement Offer, %',
+			'client_saving_amonut' => 'Client Savings, $',
+			'client_savings_percentage' => 'Client Savings, %',
+			'client_reserves' => 'Client Reserves, $',
+			'service_fees' => 'Service Fees, $',
+			'difference_amount' => 'Difference',
 			'offer_status' => 'Offer Status',
 			'valid_date' => 'Valid Date',
+			'comments' => 'Comments',
 			'created_at' => 'Created At',
 			'updated_at' => 'Updated At',
 		);
@@ -109,9 +111,9 @@ class SettlementOffer extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('id',$this->id);
-		$criteria->compare('debtor_id',$this->debtor_id);
-		$criteria->compare('creditor_id',$this->creditor_id);
-		$criteria->compare('negotiator_id',$this->negotiator_id);
+		$criteria->compare('Fk_debtor_id',$this->Fk_debtor_id);
+		$criteria->compare('Fk_creditor_id',$this->Fk_creditor_id);
+		$criteria->compare('Fk_negotiator_id',$this->Fk_negotiator_id);
 		$criteria->compare('file_number',$this->file_number,true);
 		$criteria->compare('offer_date',$this->offer_date,true);
 		$criteria->compare('offer_amount',$this->offer_amount);
@@ -123,6 +125,7 @@ class SettlementOffer extends CActiveRecord
 		$criteria->compare('difference_amount',$this->difference_amount);
 		$criteria->compare('offer_status',$this->offer_status);
 		$criteria->compare('valid_date',$this->valid_date,true);
+		$criteria->compare('comments',$this->comments,true);
 		$criteria->compare('created_at',$this->created_at,true);
 		$criteria->compare('updated_at',$this->updated_at,true);
 

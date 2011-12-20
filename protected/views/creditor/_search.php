@@ -16,6 +16,11 @@
 	</div>
 
 	<div class="row">
+		<?php echo $form->label($model,'badge_number'); ?>
+		<?php echo $form->textField($model,'badge_number',array('size'=>60,'maxlength'=>255)); ?>
+	</div>
+
+	<div class="row">
 		<?php echo $form->label($model,'name'); ?>
 		<?php echo $form->textField($model,'name',array('size'=>60,'maxlength'=>255)); ?>
 	</div>
@@ -26,13 +31,23 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'postal_code'); ?>
-		<?php echo $form->textField($model,'postal_code',array('size'=>60,'maxlength'=>255)); ?>
+		<?php echo $form->label($model,'telephone1'); ?>
+		<?php echo $form->textField($model,'telephone1',array('size'=>60,'maxlength'=>255)); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'telephone'); ?>
-		<?php echo $form->textField($model,'telephone',array('size'=>60,'maxlength'=>255)); ?>
+		<?php echo $form->label($model,'telephone1_ext'); ?>
+		<?php echo $form->textField($model,'telephone1_ext',array('size'=>6,'maxlength'=>6)); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'telephone2'); ?>
+		<?php echo $form->textField($model,'telephone2',array('size'=>60,'maxlength'=>255)); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'telephone2_ext'); ?>
+		<?php echo $form->textField($model,'telephone2_ext',array('size'=>6,'maxlength'=>6)); ?>
 	</div>
 
 	<div class="row">
@@ -43,6 +58,11 @@
 	<div class="row">
 		<?php echo $form->label($model,'faxnumber'); ?>
 		<?php echo $form->textField($model,'faxnumber',array('size'=>60,'maxlength'=>255)); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'comments'); ?>
+		<?php echo $form->textField($model,'comments',array('size'=>60,'maxlength'=>255)); ?>
 	</div>
 
 	<div class="row">

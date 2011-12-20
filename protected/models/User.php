@@ -5,11 +5,10 @@
  *
  * The followings are the available columns in table 'tbl_user':
  * @property integer $id
- * @property integer $role
+ * @property integer $Fk_role_id
  * @property string $username
  * @property string $password
  * @property string $salt
- * @property string $email
  * @property integer $remember_me
  * @property string $created_at
  * @property string $updated_at
@@ -42,11 +41,11 @@ class User extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('created_at, updated_at', 'required'),
-			array('role, remember_me', 'numerical', 'integerOnly'=>true),
-			array('username, password, salt, email', 'length', 'max'=>255),
+			array('Fk_role_id, remember_me', 'numerical', 'integerOnly'=>true),
+			array('username, password, salt', 'length', 'max'=>255),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, role, username, password, salt, email, remember_me, created_at, updated_at', 'safe', 'on'=>'search'),
+			array('id, Fk_role_id, username, password, salt, remember_me, created_at, updated_at', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -68,11 +67,10 @@ class User extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'role' => 'Role',
+			'Fk_role_id' => 'Fk Role',
 			'username' => 'Username',
 			'password' => 'Password',
 			'salt' => 'Salt',
-			'email' => 'Email',
 			'remember_me' => 'Remember Me',
 			'created_at' => 'Created At',
 			'updated_at' => 'Updated At',
@@ -91,11 +89,10 @@ class User extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('id',$this->id);
-		$criteria->compare('role',$this->role);
+		$criteria->compare('Fk_role_id',$this->Fk_role_id);
 		$criteria->compare('username',$this->username,true);
 		$criteria->compare('password',$this->password,true);
 		$criteria->compare('salt',$this->salt,true);
-		$criteria->compare('email',$this->email,true);
 		$criteria->compare('remember_me',$this->remember_me);
 		$criteria->compare('created_at',$this->created_at,true);
 		$criteria->compare('updated_at',$this->updated_at,true);

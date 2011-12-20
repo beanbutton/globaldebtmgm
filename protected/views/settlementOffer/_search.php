@@ -11,18 +11,18 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'debtor_id'); ?>
-		<?php echo $form->textField($model,'debtor_id'); ?>
+		<?php echo $form->label($model,'Fk_debtor_id'); ?>
+		<?php echo $form->textField($model,'Fk_debtor_id'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'creditor_id'); ?>
-		<?php echo $form->textField($model,'creditor_id'); ?>
+		<?php echo $form->label($model,'Fk_creditor_id'); ?>
+		<?php echo $form->textField($model,'Fk_creditor_id'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'negotiator_id'); ?>
-		<?php echo $form->textField($model,'negotiator_id'); ?>
+		<?php echo $form->label($model,'Fk_negotiator_id'); ?>
+		<?php echo $form->textField($model,'Fk_negotiator_id'); ?>
 	</div>
 
 	<div class="row">
@@ -78,6 +78,11 @@
 	<div class="row">
 		<?php echo $form->label($model,'valid_date'); ?>
 		<?php echo $form->textField($model,'valid_date'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'comments'); ?>
+		<?php echo $form->textField($model,'comments',array('size'=>60,'maxlength'=>255)); ?>
 	</div>
 
 	<div class="row">

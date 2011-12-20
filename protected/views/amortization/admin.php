@@ -25,10 +25,7 @@ $('.search-form form').submit(function(){
 
 <h1>Manage Amortizations</h1>
 
-<p>
-You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
-or <b>=</b>) at the beginning of each of your search values to specify how the comparison should be done.
-</p>
+<br><br>
 
 <?php echo CHtml::link('Advanced Search','#',array('class'=>'search-button')); ?>
 <div class="search-form" style="display:none">
@@ -42,22 +39,23 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
 	'columns'=>array(
-		/*'id',*/
-		'payment_date',
+		/*'id',
+		'Fk_debtor_id',*/
+		'payment_start_date',
+		'payment_end_date',
 		'total_monthly_cost',
 		'adminstration_fee',
 		'maintenance_fee',
 		'settlement_savings_fund',
-		/*
-		'total_monthly_cost_total',
+		/*'total_monthly_cost_total',
 		'total_adminstration_fee',
 		'total_maintenance_fee',
 		'total_settlement_savings_fund',
 		'created_at',
 		'updated_at',
-		
+		*/
 		array(
 			'class'=>'CButtonColumn',
-		),*/
+		),
 	),
 )); ?>

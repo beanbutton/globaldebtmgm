@@ -25,11 +25,7 @@ $('.search-form form').submit(function(){
 
 <h1>Manage Debtor Program Infos</h1>
 
-<p>
-You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
-or <b>=</b>) at the beginning of each of your search values to specify how the comparison should be done.
-</p>
-
+<br><br>
 <?php echo CHtml::link('Advanced Search','#',array('class'=>'search-button')); ?>
 <div class="search-form" style="display:none">
 <?php $this->renderPartial('_search',array(
@@ -53,7 +49,7 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 		'saf_monthly_payment',
 		'monthly_payment_due_date',
 		'enrollment_date',
-		'first_monthly_payment_date',
+		/*'first_monthly_payment_date',
 		'next_payment_due_date',
 		'contract_due_date',
 		'nsf_amount',
@@ -68,12 +64,12 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 		'service_fee_automatic',
 		'service_fee_percentage_automatic',
 		'service_fee_manual',
-		'service_fee_percentage_manual',
+		'service_fee_percentage_manual',*/
 		/*'created_at',
 		'updated_at',
-		
+                */
 		array(
 			'class'=>'CButtonColumn',
-		),*/
+		),
 	),
 )); ?>

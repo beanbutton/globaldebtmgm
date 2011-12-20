@@ -4,7 +4,8 @@ drop table if exists tbl_debtor;
 create table tbl_debtor
 (
     id int not null auto_increment primary key,
-    
+    Fk_user_id int, index(Fk_user_id),
+
     Fk_client_id int,
     index( Fk_client_id ),
     #foreign key(Fk_client_id) references tbl_client(Fk_client_id ),
@@ -47,7 +48,9 @@ create table tbl_debtor
     lastname varchar(255), index( lastname),
     address varchar(255), index( address ),
     
-	date_of_birth datetime,
+    drivers_licence varchar(255),   
+
+    date_of_birth datetime,
     social_insurance_number varchar(255), index( social_insurance_number),
     date_filed_chapter7 datetime,
     date_filed_chapter13 datetime,
@@ -59,23 +62,37 @@ create table tbl_debtor
     faxnumber varchar(255),
     email varchar(255),
 	
-    drivers_licence varchar(255),
-    credit_card_number varchar(255), index(credit_card_number),
-    	
-	employment_status int(11),
-    
-	employer varchar(255),
+ 	
+    employment_status int(11),
+    employer varchar(255),
     employment_occupation varchar(255),
-	employment_work_years int,
+    employment_work_years int,
     employment_telephone varchar(255),
-    
     employment_insurance int,
     employment_disability int,
-    pension int,
+    employee_pension int,
     	
     correspondence_language int,
-    
     comments varchar(255),
+
+    spouse_firstname varchar(255),    
+    spouse_lastname varchar(255),
+    spouse_address varchar(255),
+    spouse_marital_status int,
+
+    spouse_monthly_income float,
+    spouse_gross_monthly_income float,
+    
+    spouse_employment_status int,
+    spouse_employer varchar(255),
+    spouse_employment_occupation varchar(255),
+    spouse_employment_work_years int,
+    
+    spouse_number_of_children int,
+    spouse_drivers_licence varchar(255),
+    
+    spouse_active_duty int,
+    spouse_comments varchar(255),
     
     created_at datetime NOT NULL,
     updated_at datetime NOT NULL

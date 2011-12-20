@@ -5,9 +5,9 @@ create table tbl_settlement_offer
 (
     id int not null auto_increment primary key,
 
-    debtor_id int,
-    creditor_id int,
-    negotiator_id int,
+    Fk_debtor_id int, index(Fk_debtor_id),
+    Fk_creditor_id int, index(Fk_creditor_id),
+    Fk_negotiator_id int, index(Fk_negotiator_id),
 
     file_number varchar(255), index( file_number),
     offer_date datetime,
@@ -20,6 +20,7 @@ create table tbl_settlement_offer
     difference_amount float,
     offer_status int,
     valid_date datetime,
+    comments varchar(255),
    
     created_at timestamp, 
     updated_at timestamp

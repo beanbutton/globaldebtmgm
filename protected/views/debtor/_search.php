@@ -11,6 +11,11 @@
 	</div>
 
 	<div class="row">
+		<?php echo $form->label($model,'Fk_user_id'); ?>
+		<?php echo $form->textField($model,'Fk_user_id'); ?>
+	</div>
+
+	<div class="row">
 		<?php echo $form->label($model,'Fk_client_id'); ?>
 		<?php echo $form->textField($model,'Fk_client_id'); ?>
 	</div>
@@ -71,28 +76,8 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'date_of_birth'); ?>
-		<?php echo $form->textField($model,'date_of_birth'); ?>
-	</div>
-
-	<div class="row">
 		<?php echo $form->label($model,'address'); ?>
 		<?php echo $form->textField($model,'address',array('size'=>60,'maxlength'=>255)); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->label($model,'postal_code'); ?>
-		<?php echo $form->textField($model,'postal_code',array('size'=>60,'maxlength'=>255)); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->label($model,'social_insurance_number'); ?>
-		<?php echo $form->textField($model,'social_insurance_number',array('size'=>60,'maxlength'=>255)); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->label($model,'credit_card_number'); ?>
-		<?php echo $form->textField($model,'credit_card_number',array('size'=>60,'maxlength'=>255)); ?>
 	</div>
 
 	<div class="row">
@@ -101,8 +86,13 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'correspondence_language'); ?>
-		<?php echo $form->textField($model,'correspondence_language'); ?>
+		<?php echo $form->label($model,'date_of_birth'); ?>
+		<?php echo $form->textField($model,'date_of_birth'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'social_insurance_number'); ?>
+		<?php echo $form->textField($model,'social_insurance_number',array('size'=>60,'maxlength'=>255)); ?>
 	</div>
 
 	<div class="row">
@@ -141,18 +131,23 @@
 	</div>
 
 	<div class="row">
+		<?php echo $form->label($model,'email'); ?>
+		<?php echo $form->textField($model,'email',array('size'=>60,'maxlength'=>255)); ?>
+	</div>
+
+	<div class="row">
 		<?php echo $form->label($model,'employment_status'); ?>
 		<?php echo $form->textField($model,'employment_status'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'employment_occupation'); ?>
-		<?php echo $form->textField($model,'employment_occupation',array('size'=>60,'maxlength'=>255)); ?>
+		<?php echo $form->label($model,'employer'); ?>
+		<?php echo $form->textField($model,'employer',array('size'=>60,'maxlength'=>255)); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'employer'); ?>
-		<?php echo $form->textField($model,'employer',array('size'=>60,'maxlength'=>255)); ?>
+		<?php echo $form->label($model,'employment_occupation'); ?>
+		<?php echo $form->textField($model,'employment_occupation',array('size'=>60,'maxlength'=>255)); ?>
 	</div>
 
 	<div class="row">
@@ -176,8 +171,13 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'pension'); ?>
-		<?php echo $form->textField($model,'pension'); ?>
+		<?php echo $form->label($model,'employee_pension'); ?>
+		<?php echo $form->textField($model,'employee_pension'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'correspondence_language'); ?>
+		<?php echo $form->textField($model,'correspondence_language'); ?>
 	</div>
 
 	<div class="row">

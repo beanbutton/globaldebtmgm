@@ -19,7 +19,9 @@ $this->menu=array(
 	'data'=>$model,
 	'attributes'=>array(
 		'id',
-		'payment_date',
+		'Fk_debtor_id',
+		'payment_start_date',
+		'payment_end_date',
 		'total_monthly_cost',
 		'adminstration_fee',
 		'maintenance_fee',

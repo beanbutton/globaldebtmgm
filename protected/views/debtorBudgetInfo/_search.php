@@ -11,23 +11,28 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'Fk_debtor_id'); ?>
-		<?php echo $form->textField($model,'Fk_debtor_id'); ?>
-	</div>
-
-	<div class="row">
 		<?php echo $form->label($model,'monthly_income'); ?>
 		<?php echo $form->textField($model,'monthly_income'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'gross_monthly_income'); ?>
-		<?php echo $form->textField($model,'gross_monthly_income'); ?>
+		<?php echo $form->label($model,'monthly_auto_expenses'); ?>
+		<?php echo $form->textField($model,'monthly_auto_expenses'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'monthly_auto_expenses'); ?>
-		<?php echo $form->textField($model,'monthly_auto_expenses'); ?>
+		<?php echo $form->label($model,'car_payment1'); ?>
+		<?php echo $form->textField($model,'car_payment1'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'car_payment2'); ?>
+		<?php echo $form->textField($model,'car_payment2'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'recreational_vehicle'); ?>
+		<?php echo $form->textField($model,'recreational_vehicle'); ?>
 	</div>
 
 	<div class="row">
@@ -53,6 +58,26 @@
 	<div class="row">
 		<?php echo $form->label($model,'rrsp'); ?>
 		<?php echo $form->textField($model,'rrsp'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'gas_and_electricuty'); ?>
+		<?php echo $form->textField($model,'gas_and_electricuty'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'telephone'); ?>
+		<?php echo $form->textField($model,'telephone'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'water_trash_sewer'); ?>
+		<?php echo $form->textField($model,'water_trash_sewer'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'cable_and_internet_services'); ?>
+		<?php echo $form->textField($model,'cable_and_internet_services'); ?>
 	</div>
 
 	<div class="row">

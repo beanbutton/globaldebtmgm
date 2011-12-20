@@ -4,31 +4,35 @@
 	<?php echo CHtml::link(CHtml::encode($data->id), array('view', 'id'=>$data->id)); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('Fk_debtor_id')); ?>:</b>
-	<?php echo CHtml::encode($data->Fk_debtor_id); ?>
-	<br />
-
 	<b><?php echo CHtml::encode($data->getAttributeLabel('monthly_income')); ?>:</b>
 	<?php echo CHtml::encode($data->monthly_income); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('gross_monthly_income')); ?>:</b>
-	<?php echo CHtml::encode($data->gross_monthly_income); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('monthly_auto_expenses')); ?>:</b>
 	<?php echo CHtml::encode($data->monthly_auto_expenses); ?>
 	<br />
 
+	<b><?php echo CHtml::encode($data->getAttributeLabel('car_payment1')); ?>:</b>
+	<?php echo CHtml::encode($data->car_payment1); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('car_payment2')); ?>:</b>
+	<?php echo CHtml::encode($data->car_payment2); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('recreational_vehicle')); ?>:</b>
+	<?php echo CHtml::encode($data->recreational_vehicle); ?>
+	<br />
+
 	<b><?php echo CHtml::encode($data->getAttributeLabel('monthly_auto_payments')); ?>:</b>
 	<?php echo CHtml::encode($data->monthly_auto_payments); ?>
 	<br />
 
+	<?php /*
 	<b><?php echo CHtml::encode($data->getAttributeLabel('monthly_utilites')); ?>:</b>
 	<?php echo CHtml::encode($data->monthly_utilites); ?>
 	<br />
 
-	<?php /*
 	<b><?php echo CHtml::encode($data->getAttributeLabel('monthly_grocery_expenses')); ?>:</b>
 	<?php echo CHtml::encode($data->monthly_grocery_expenses); ?>
 	<br />
@@ -39,6 +43,22 @@
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('rrsp')); ?>:</b>
 	<?php echo CHtml::encode($data->rrsp); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('gas_and_electricuty')); ?>:</b>
+	<?php echo CHtml::encode($data->gas_and_electricuty); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('telephone')); ?>:</b>
+	<?php echo CHtml::encode($data->telephone); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('water_trash_sewer')); ?>:</b>
+	<?php echo CHtml::encode($data->water_trash_sewer); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('cable_and_internet_services')); ?>:</b>
+	<?php echo CHtml::encode($data->cable_and_internet_services); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('food_stamp_or_other')); ?>:</b>

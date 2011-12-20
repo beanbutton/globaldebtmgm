@@ -11,8 +11,18 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'payment_date'); ?>
-		<?php echo $form->textField($model,'payment_date'); ?>
+		<?php echo $form->label($model,'Fk_debtor_id'); ?>
+		<?php echo $form->textField($model,'Fk_debtor_id'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'payment_start_date'); ?>
+		<?php echo $form->textField($model,'payment_start_date'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'payment_end_date'); ?>
+		<?php echo $form->textField($model,'payment_end_date'); ?>
 	</div>
 
 	<div class="row">

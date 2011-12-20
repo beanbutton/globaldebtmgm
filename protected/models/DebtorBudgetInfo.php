@@ -5,15 +5,20 @@
  *
  * The followings are the available columns in table 'tbl_debtor_budget_info':
  * @property integer $id
- * @property integer $Fk_debtor_id
  * @property double $monthly_income
- * @property double $gross_monthly_income
  * @property double $monthly_auto_expenses
+ * @property double $car_payment1
+ * @property double $car_payment2
+ * @property double $recreational_vehicle
  * @property double $monthly_auto_payments
  * @property double $monthly_utilites
  * @property double $monthly_grocery_expenses
  * @property double $monthly_insurance_payments
  * @property double $rrsp
+ * @property double $gas_and_electricuty
+ * @property double $telephone
+ * @property double $water_trash_sewer
+ * @property double $cable_and_internet_services
  * @property double $food_stamp_or_other
  * @property double $spouse_monthly_takehome_pay
  * @property string $reason_for_hardship
@@ -56,13 +61,13 @@ class DebtorBudgetInfo extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('created_at', 'required'),
-			array('Fk_debtor_id, total_number_dependants', 'numerical', 'integerOnly'=>true),
-			array('monthly_income, gross_monthly_income, monthly_auto_expenses, monthly_auto_payments, monthly_utilites, monthly_grocery_expenses, monthly_insurance_payments, rrsp, food_stamp_or_other, spouse_monthly_takehome_pay, estimated_home_value, remaining_mortgage_balance, household_expenses, total_debt_to_income_perc, total_expenses_to_income_variance, mortgage, rent', 'numerical'),
+			array('total_number_dependants', 'numerical', 'integerOnly'=>true),
+			array('monthly_income, monthly_auto_expenses, car_payment1, car_payment2, recreational_vehicle, monthly_auto_payments, monthly_utilites, monthly_grocery_expenses, monthly_insurance_payments, rrsp, gas_and_electricuty, telephone, water_trash_sewer, cable_and_internet_services, food_stamp_or_other, spouse_monthly_takehome_pay, estimated_home_value, remaining_mortgage_balance, household_expenses, total_debt_to_income_perc, total_expenses_to_income_variance, mortgage, rent', 'numerical'),
 			array('reason_for_hardship', 'length', 'max'=>255),
 			array('updated_at', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, Fk_debtor_id, monthly_income, gross_monthly_income, monthly_auto_expenses, monthly_auto_payments, monthly_utilites, monthly_grocery_expenses, monthly_insurance_payments, rrsp, food_stamp_or_other, spouse_monthly_takehome_pay, reason_for_hardship, estimated_home_value, remaining_mortgage_balance, total_number_dependants, household_expenses, total_debt_to_income_perc, total_expenses_to_income_variance, mortgage, rent, created_at, updated_at', 'safe', 'on'=>'search'),
+			array('id, monthly_income, monthly_auto_expenses, car_payment1, car_payment2, recreational_vehicle, monthly_auto_payments, monthly_utilites, monthly_grocery_expenses, monthly_insurance_payments, rrsp, gas_and_electricuty, telephone, water_trash_sewer, cable_and_internet_services, food_stamp_or_other, spouse_monthly_takehome_pay, reason_for_hardship, estimated_home_value, remaining_mortgage_balance, total_number_dependants, household_expenses, total_debt_to_income_perc, total_expenses_to_income_variance, mortgage, rent, created_at, updated_at', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -84,15 +89,20 @@ class DebtorBudgetInfo extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'Fk_debtor_id' => 'Fk Debtor',
 			'monthly_income' => 'Monthly Income',
-			'gross_monthly_income' => 'Gross Monthly Income',
 			'monthly_auto_expenses' => 'Monthly Auto Expenses',
+			'car_payment1' => 'Car Payment1',
+			'car_payment2' => 'Car Payment2',
+			'recreational_vehicle' => 'Recreational Vehicle',
 			'monthly_auto_payments' => 'Monthly Auto Payments',
 			'monthly_utilites' => 'Monthly Utilites',
 			'monthly_grocery_expenses' => 'Monthly Grocery Expenses',
 			'monthly_insurance_payments' => 'Monthly Insurance Payments',
 			'rrsp' => 'Rrsp',
+			'gas_and_electricuty' => 'Gas And Electricuty',
+			'telephone' => 'Telephone',
+			'water_trash_sewer' => 'Water Trash Sewer',
+			'cable_and_internet_services' => 'Cable And Internet Services',
 			'food_stamp_or_other' => 'Food Stamp Or Other',
 			'spouse_monthly_takehome_pay' => 'Spouse Monthly Takehome Pay',
 			'reason_for_hardship' => 'Reason For Hardship',
@@ -121,15 +131,20 @@ class DebtorBudgetInfo extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('id',$this->id);
-		$criteria->compare('Fk_debtor_id',$this->Fk_debtor_id);
 		$criteria->compare('monthly_income',$this->monthly_income);
-		$criteria->compare('gross_monthly_income',$this->gross_monthly_income);
 		$criteria->compare('monthly_auto_expenses',$this->monthly_auto_expenses);
+		$criteria->compare('car_payment1',$this->car_payment1);
+		$criteria->compare('car_payment2',$this->car_payment2);
+		$criteria->compare('recreational_vehicle',$this->recreational_vehicle);
 		$criteria->compare('monthly_auto_payments',$this->monthly_auto_payments);
 		$criteria->compare('monthly_utilites',$this->monthly_utilites);
 		$criteria->compare('monthly_grocery_expenses',$this->monthly_grocery_expenses);
 		$criteria->compare('monthly_insurance_payments',$this->monthly_insurance_payments);
 		$criteria->compare('rrsp',$this->rrsp);
+		$criteria->compare('gas_and_electricuty',$this->gas_and_electricuty);
+		$criteria->compare('telephone',$this->telephone);
+		$criteria->compare('water_trash_sewer',$this->water_trash_sewer);
+		$criteria->compare('cable_and_internet_services',$this->cable_and_internet_services);
 		$criteria->compare('food_stamp_or_other',$this->food_stamp_or_other);
 		$criteria->compare('spouse_monthly_takehome_pay',$this->spouse_monthly_takehome_pay);
 		$criteria->compare('reason_for_hardship',$this->reason_for_hardship,true);

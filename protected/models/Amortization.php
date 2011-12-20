@@ -5,7 +5,9 @@
  *
  * The followings are the available columns in table 'tbl_amortization':
  * @property integer $id
- * @property string $payment_date
+ * @property integer $Fk_debtor_id
+ * @property string $payment_start_date
+ * @property string $payment_end_date
  * @property double $total_monthly_cost
  * @property double $adminstration_fee
  * @property double $maintenance_fee
@@ -44,12 +46,13 @@ class Amortization extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('created_at', 'required'),
+			array('created_at, updated_at', 'required'),
+			array('Fk_debtor_id', 'numerical', 'integerOnly'=>true),
 			array('total_monthly_cost, adminstration_fee, maintenance_fee, settlement_savings_fund, total_monthly_cost_total, total_adminstration_fee, total_maintenance_fee, total_settlement_savings_fund', 'numerical'),
-			array('payment_date, updated_at', 'safe'),
+			array('payment_start_date, payment_end_date', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, payment_date, total_monthly_cost, adminstration_fee, maintenance_fee, settlement_savings_fund, total_monthly_cost_total, total_adminstration_fee, total_maintenance_fee, total_settlement_savings_fund, created_at, updated_at', 'safe', 'on'=>'search'),
+			array('id, Fk_debtor_id, payment_start_date, payment_end_date, total_monthly_cost, adminstration_fee, maintenance_fee, settlement_savings_fund, total_monthly_cost_total, total_adminstration_fee, total_maintenance_fee, total_settlement_savings_fund, created_at, updated_at', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -71,7 +74,9 @@ class Amortization extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'payment_date' => 'Payment Date',
+			'Fk_debtor_id' => 'Fk Debtor',
+			'payment_start_date' => 'Payment Start Date',
+			'payment_end_date' => 'Payment End Date',
 			'total_monthly_cost' => 'Total Monthly Cost',
 			'adminstration_fee' => 'Adminstration Fee',
 			'maintenance_fee' => 'Maintenance Fee',
@@ -97,7 +102,9 @@ class Amortization extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('id',$this->id);
-		$criteria->compare('payment_date',$this->payment_date,true);
+		$criteria->compare('Fk_debtor_id',$this->Fk_debtor_id);
+		$criteria->compare('payment_start_date',$this->payment_start_date,true);
+		$criteria->compare('payment_end_date',$this->payment_end_date,true);
 		$criteria->compare('total_monthly_cost',$this->total_monthly_cost);
 		$criteria->compare('adminstration_fee',$this->adminstration_fee);
 		$criteria->compare('maintenance_fee',$this->maintenance_fee);

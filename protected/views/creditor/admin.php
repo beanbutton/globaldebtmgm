@@ -44,17 +44,21 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 	'columns'=>array(
 		/*'id',
 		'Fk_debtor_id',*/
+		'badge_number',
 		'name',
 		'address',
-		'postal_code',
-		'telephone',
-		'faxnumber',
+		'telephone1',
+		'telephone1_ext',
+		'telephone2',
+		'telephone2_ext',
 		'email',
+		'faxnumber',
+		'comments',
 		/*'created_at',
 		'updated_at',
-		
+		*/
 		array(
 			'class'=>'CButtonColumn',
-		),*/
+		),
 	),
 )); ?>

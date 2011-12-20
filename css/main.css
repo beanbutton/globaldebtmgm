@@ -227,3 +227,20 @@ div.search-form
 {
 	background: #80CFFF;
 }
+
+.smallField {
+     width: 110px;
+     font-weight: bold;
+}
+
+
+.midField {
+     width: 265px;
+     font-weight: bold;
+}
+
+
+.largeField {
+     width: 600px;
+     font-weight: bold;
+}

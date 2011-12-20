@@ -4,8 +4,16 @@
 	<?php echo CHtml::link(CHtml::encode($data->id), array('view', 'id'=>$data->id)); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('payment_date')); ?>:</b>
-	<?php echo CHtml::encode($data->payment_date); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('Fk_debtor_id')); ?>:</b>
+	<?php echo CHtml::encode($data->Fk_debtor_id); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('payment_start_date')); ?>:</b>
+	<?php echo CHtml::encode($data->payment_start_date); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('payment_end_date')); ?>:</b>
+	<?php echo CHtml::encode($data->payment_end_date); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('total_monthly_cost')); ?>:</b>
@@ -20,6 +28,7 @@
 	<?php echo CHtml::encode($data->maintenance_fee); ?>
 	<br />
 
+	<?php /*
 	<b><?php echo CHtml::encode($data->getAttributeLabel('settlement_savings_fund')); ?>:</b>
 	<?php echo CHtml::encode($data->settlement_savings_fund); ?>
 	<br />
@@ -28,7 +37,6 @@
 	<?php echo CHtml::encode($data->total_monthly_cost_total); ?>
 	<br />
 
-	<?php /*
 	<b><?php echo CHtml::encode($data->getAttributeLabel('total_adminstration_fee')); ?>:</b>
 	<?php echo CHtml::encode($data->total_adminstration_fee); ?>
 	<br />

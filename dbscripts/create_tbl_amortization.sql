@@ -4,7 +4,11 @@ drop table if exists tbl_amortization;
 create table tbl_amortization
 (
     id int not null auto_increment primary key,
-    payment_date datetime,
+    Fk_debtor_id int, index(Fk_debtor_id),
+    
+    payment_start_date datetime,
+    payment_end_date datetime,
+
     total_monthly_cost float,
     adminstration_fee float,
     maintenance_fee float,

@@ -29,7 +29,8 @@
          <?php $this->widget('application.extensions.mbmenu.MbMenu',array( 
             'items'=>array( 
                 array('label'=>'Home', 'url'=>array('/site/index')), 
-                array('label'=>'Client', 'url'=>array('/client/admin')), 
+                array('label'=>'Clients', 'url'=>array('/client/admin')), 
+                array('label'=>'Creditors', 'url'=>array('/creditor')),
                 array('label'=>'Debtors',
                   'items'=>array(
                      array('label'=>'Debtors Info',
@@ -39,19 +40,21 @@
                           ),
                         ),
                      array('label'=>'Debtor Progress', 'url'=>array('/debtorProgress/admin')),
-                     array('label'=>'Financial Info', 'url'=>array('/debtorFinancialInfo/admin')),
                      array('label'=>'Budget Info', 'url'=>array('/debtorBudgetInfo/admin')),
                      array('label'=>'Program Info', 'url'=>array('/debtorProgramInfo/admin')),
                      array('label'=>'Amortization', 'url'=>array('/amortization/admin')),
-                     array('label'=>'Settlement Offer', 'url'=>array('/debtorSettlementOffer/admin')),
+                     array('label'=>'Settlement Offer', 'url'=>array('/settlementOffer/admin')),
                    ),
                   ),
-                array('label'=>'Creditors', 'url'=>array('/creditor')),
                 array('label'=>'Admin', 'url'=>array('/user/create'), 
                   'items'=>array( 
-                    array('label'=>'Reports', 'url'=>array('/user/create')), 
-                    array('label'=>'Add User', 'url'=>array('/user/create')), 
-                    array('label'=>'Change Password', 'url'=>array('/user/list')), 
+                    array('label'=>'Add User', 'url'=>array('/user/create')),
+                    array('label'=>'Change Password', 'url'=>array('/user/list')),
+                    array('label'=>'Manage Employees', 'url'=>array('/employee/admin')),
+                    array('label'=>'Financial Info', 'url'=>array('/debtorFinancialInfo/admin')),
+                    array('label'=>'Manage Reports', 'url'=>array('/user/create')), 
+                    array('label'=>'File Access', 'url'=>array('/user/create')), 
+                   
                   ), 
                 ),
                 array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
