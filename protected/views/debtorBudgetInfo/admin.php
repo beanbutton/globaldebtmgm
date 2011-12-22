@@ -38,19 +38,18 @@ $('.search-form form').submit(function(){
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
 	'columns'=>array(
-		'id',
+		/*'id',*/
 		'monthly_income',
 		'monthly_auto_expenses',
-		'car_payment1',
+		/*'car_payment1',
 		'car_payment2',
-		'recreational_vehicle',
-		/*
+		'recreational_vehicle',*/		
 		'monthly_auto_payments',
 		'monthly_utilites',
 		'monthly_grocery_expenses',
 		'monthly_insurance_payments',
 		'rrsp',
-		'gas_and_electricuty',
+		/*'gas_and_electricuty',
 		'telephone',
 		'water_trash_sewer',
 		'cable_and_internet_services',

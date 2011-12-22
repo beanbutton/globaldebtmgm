@@ -39,6 +39,9 @@
                               '37' => '37 months', '38' => '38 months',
                               '39' => '39 months', '40' => '40 months',
                               '41' => '41 months', '42' => '42 months',
+                              '43' => '43 months', '44' => '44 months',
+                              '45' => '45 months', '46' => '46 months',
+                              '47' => '47 months', '48' => '48 months',
                               )); ?>
 		<?php echo $form->error($model,'program_type'); ?>
 	</div>

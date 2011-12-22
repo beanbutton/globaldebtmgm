@@ -97,8 +97,9 @@
 	
 	<div class="col buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
+               	<?php echo CHtml::submitButton($model->isNewRecord ? 'Add Report' : 'Save'); ?>
 	</div>
-
+        
 <?php $this->endWidget(); ?>
 
 </div><!-- form -->

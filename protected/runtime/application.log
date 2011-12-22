@@ -907,3 +907,11 @@ REQUEST_URI=/index.php?r=employee/create
 in C:\xampplite\htdocs\project\globaldebtmgm\protected\views\employee\_form.php (13)
 in C:\xampplite\htdocs\project\globaldebtmgm\protected\views\employee\create.php (15)
 in C:\xampplite\htdocs\project\globaldebtmgm\protected\controllers\EmployeeController.php (78)
+2011/12/21 21:10:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "list".' in C:\xampplite\htdocs\project\YiiRoot\framework\web\CController.php:477
+Stack trace:
+#0 C:\xampplite\htdocs\project\YiiRoot\framework\web\CController.php(262): CController->missingAction('list')
+#1 C:\xampplite\htdocs\project\YiiRoot\framework\web\CWebApplication.php(277): CController->run('list')
+#2 C:\xampplite\htdocs\project\YiiRoot\framework\web\CWebApplication.php(136): CWebApplication->runController('user/list')
+#3 C:\xampplite\htdocs\project\YiiRoot\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\xampplite\htdocs\project\globaldebtmgm\index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/index.php?r=user/list

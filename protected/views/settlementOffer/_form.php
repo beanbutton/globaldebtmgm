@@ -231,6 +231,7 @@
             <div class="row">
                    <?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
                    <?php echo CHtml::submitButton($model->isNewRecord ? 'View Notes' : 'Save'); ?>
+                   <?php echo CHtml::submitButton($model->isNewRecord ? 'Add Report' : 'Save'); ?>
                     
             </div>    
         </div>
