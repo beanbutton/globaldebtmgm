@@ -84,7 +84,7 @@ class Creditor extends CActiveRecord
 			'telephone2' => 'Telephone2',
 			'telephone2_ext' => 'Telephone2 Ext',
 			'email' => 'Email',
-			'faxnumber' => 'Faxnumber',
+			'faxnumber' => 'Fax number',
 			'comments' => 'Comments',
 			'created_at' => 'Created At',
 			'updated_at' => 'Updated At',
