@@ -28,7 +28,6 @@
 	<?php echo CHtml::encode($data->original_debt); ?>
 	<br />
 
-	<?php /*
 	<b><?php echo CHtml::encode($data->getAttributeLabel('monthly_income')); ?>:</b>
 	<?php echo CHtml::encode($data->monthly_income); ?>
 	<br />
@@ -108,7 +107,8 @@
 	<b><?php echo CHtml::encode($data->getAttributeLabel('savings_percentage')); ?>:</b>
 	<?php echo CHtml::encode($data->savings_percentage); ?>
 	<br />
-
+        <?php /*
+	
 	<b><?php echo CHtml::encode($data->getAttributeLabel('created_at')); ?>:</b>
 	<?php echo CHtml::encode($data->created_at); ?>
 	<br />

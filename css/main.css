@@ -30,6 +30,11 @@ body
 #sidebar
 {
 	padding: 20px 20px 20px 0;
+        float: right;
+        width: 200px;
+        position: absolute;
+        top:90px;
+        left:730px;
 }
 
 #footer

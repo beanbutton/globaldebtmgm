@@ -28,7 +28,6 @@
 	<?php echo CHtml::encode($data->monthly_auto_payments); ?>
 	<br />
 
-	<?php /*
 	<b><?php echo CHtml::encode($data->getAttributeLabel('monthly_utilites')); ?>:</b>
 	<?php echo CHtml::encode($data->monthly_utilites); ?>
 	<br />
@@ -104,7 +103,7 @@
 	<b><?php echo CHtml::encode($data->getAttributeLabel('rent')); ?>:</b>
 	<?php echo CHtml::encode($data->rent); ?>
 	<br />
-
+        <?php /*
 	<b><?php echo CHtml::encode($data->getAttributeLabel('created_at')); ?>:</b>
 	<?php echo CHtml::encode($data->created_at); ?>
 	<br />

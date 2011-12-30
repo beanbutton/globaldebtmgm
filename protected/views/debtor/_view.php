@@ -28,7 +28,6 @@
 	<?php echo CHtml::encode($data->Fk_budget_info_id); ?>
 	<br />
 
-	<?php /*
 	<b><?php echo CHtml::encode($data->getAttributeLabel('Fk_program_info_id')); ?>:</b>
 	<?php echo CHtml::encode($data->Fk_program_info_id); ?>
 	<br />
@@ -200,7 +199,7 @@
 	<b><?php echo CHtml::encode($data->getAttributeLabel('spouse_comments')); ?>:</b>
 	<?php echo CHtml::encode($data->spouse_comments); ?>
 	<br />
-
+        <?php /*
 	<b><?php echo CHtml::encode($data->getAttributeLabel('created_at')); ?>:</b>
 	<?php echo CHtml::encode($data->created_at); ?>
 	<br />

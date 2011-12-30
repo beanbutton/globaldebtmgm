@@ -27,7 +27,7 @@
 		<?php echo $form->error($model,'address'); ?>
 	</div>
 
-	<div class="row">
+	<div class="col telExt">
 		<?php echo $form->labelEx($model,'telephone1'); ?>
 		<?php echo $form->textField($model,'telephone1',array('size'=>60,'maxlength'=>255)); ?>
 		<?php echo $form->error($model,'telephone1'); ?>
@@ -39,7 +39,7 @@
 		<?php echo $form->error($model,'telephone1_ext'); ?>
 	</div>
 
-	<div class="row">
+	<div class="col telExt">
 		<?php echo $form->labelEx($model,'telephone2'); ?>
 		<?php echo $form->textField($model,'telephone2',array('size'=>60,'maxlength'=>255)); ?>
 		<?php echo $form->error($model,'telephone2'); ?>

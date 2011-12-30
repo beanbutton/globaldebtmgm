@@ -97,9 +97,70 @@
 	
 	<div class="col buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
+            <a href="report.php">report</a>
                	<?php echo CHtml::submitButton($model->isNewRecord ? 'Add Report' : 'Save'); ?>
 	</div>
         
+        
+        <?php /*
+        //Prepare the pdf exporter
+        $html2pdfPath = Yii::getPathOfAlias('ext.tcpdf');
+        spl_autoload_unregister(array('YiiBase','autoload'));
+        require_once("$html2pdfPath/tcpdf.php");
+        $pdf = new TCPDF('L', PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);
+        spl_autoload_register(array('YiiBase','autoload'));
+
+        // set document information
+        $pdf->SetCreator(PDF_CREATOR);  
+
+        $pdf->SetTitle("title");                
+        $pdf->SetHeaderData(PDF_HEADER_LOGO, PDF_HEADER_LOGO_WIDTH, "title", "subtitle");
+        $pdf->setHeaderFont(Array(PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN));
+        $pdf->setFooterFont(Array(PDF_FONT_NAME_DATA, '', PDF_FONT_SIZE_DATA));
+        $pdf->SetMargins(PDF_MARGIN_LEFT, PDF_MARGIN_TOP, PDF_MARGIN_RIGHT);
+        $pdf->SetHeaderMargin(PDF_MARGIN_HEADER);
+        $pdf->SetFooterMargin(PDF_MARGIN_FOOTER);
+        $pdf->SetAutoPageBreak(TRUE, PDF_MARGIN_BOTTOM);
+        $pdf->SetFont('helvetica', '', 8);
+        $pdf->SetTextColor(80,80,80);
+        $pdf->AddPage();
+
+        //Write the html from a Yii view
+        $html = Yii::app()->controller->renderPartial('//viewPath/_export', true,true);
+
+        //Convert the Html to a pdf document
+        $pdf->writeHTML($html, true, false, true, false, '');
+
+        // reset pointer to the last page
+        $pdf->lastPage();
+
+        //Close and output PDF document
+        $pdf->Output('filename.pdf', 'I');
+
+      */ ?> 
+        
+        
+        
+        <?php/*
+$pdf = Yii::createComponent('application.extensions.tcpdf.ETcPdf', 
+                            'P', 'cm', 'A4', true, 'UTF-8');
+$pdf->SetCreator(PDF_CREATOR);
+$pdf->SetAuthor("Nicola Asuni");
+$pdf->SetTitle("TCPDF Example 002");
+$pdf->SetSubject("TCPDF Tutorial");
+$pdf->SetKeywords("TCPDF, PDF, example, test, guide");
+$pdf->setPrintHeader(false);
+$pdf->setPrintFooter(false);
+$pdf->AliasNbPages();
+$pdf->AddPage();
+$pdf->SetFont("times", "BI", 20);
+$pdf->Cell(0,10,"Example 002",1,1,'C');
+$pdf->Output("example_002.pdf", "I");
+*/?>
+        
+  
 <?php $this->endWidget(); ?>
 
+
 </div><!-- form -->
+

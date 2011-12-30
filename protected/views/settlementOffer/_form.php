@@ -101,7 +101,7 @@
             <?php echo $form->error($model,'offer_amount'); ?>
           </div>
           
-          <div class="cc_add size-19">
+          <div class="cc_add size-14">
             <?php echo ('<b>Phone1</b>'); ?>
             <?php echo $form->textField($model,'offer_amount',array('size'=>15,'maxlength'=>255)); ?>
             <?php echo $form->error($model,'offer_amount'); ?>
@@ -113,7 +113,7 @@
             <?php echo $form->error($model,'offer_amount'); ?>
           </div>
           
-          <div class="cc_add size-19">
+          <div class="cc_add size-14">
             <?php echo ('<b>Phone1</b>'); ?>
             <?php echo $form->textField($model,'offer_amount',array('size'=>15,'maxlength'=>255)); ?>
             <?php echo $form->error($model,'offer_amount'); ?>

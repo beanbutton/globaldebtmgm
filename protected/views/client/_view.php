@@ -28,7 +28,6 @@
 	<?php echo CHtml::encode($data->client_services); ?>
 	<br />
 
-	<?php /*
 	<b><?php echo CHtml::encode($data->getAttributeLabel('account_managers')); ?>:</b>
 	<?php echo CHtml::encode($data->account_managers); ?>
 	<br />
@@ -52,7 +51,8 @@
 	<b><?php echo CHtml::encode($data->getAttributeLabel('comments')); ?>:</b>
 	<?php echo CHtml::encode($data->comments); ?>
 	<br />
-
+        
+        <?php /*
 	<b><?php echo CHtml::encode($data->getAttributeLabel('created_at')); ?>:</b>
 	<?php echo CHtml::encode($data->created_at); ?>
 	<br />

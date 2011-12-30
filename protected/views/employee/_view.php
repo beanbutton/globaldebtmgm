@@ -28,7 +28,6 @@
 	<?php echo CHtml::encode($data->city); ?>
 	<br />
 
-	<?php /*
 	<b><?php echo CHtml::encode($data->getAttributeLabel('postal_code')); ?>:</b>
 	<?php echo CHtml::encode($data->postal_code); ?>
 	<br />
@@ -44,7 +43,8 @@
 	<b><?php echo CHtml::encode($data->getAttributeLabel('emergency_phone_number')); ?>:</b>
 	<?php echo CHtml::encode($data->emergency_phone_number); ?>
 	<br />
-
+        
+        <?php /*
 	<b><?php echo CHtml::encode($data->getAttributeLabel('created_at')); ?>:</b>
 	<?php echo CHtml::encode($data->created_at); ?>
 	<br />

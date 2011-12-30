@@ -28,7 +28,6 @@
 	<?php echo CHtml::encode($data->postal_code); ?>
 	<br />
 
-	<?php /*
 	<b><?php echo CHtml::encode($data->getAttributeLabel('phone_number')); ?>:</b>
 	<?php echo CHtml::encode($data->phone_number); ?>
 	<br />
@@ -44,7 +43,8 @@
 	<b><?php echo CHtml::encode($data->getAttributeLabel('account_number')); ?>:</b>
 	<?php echo CHtml::encode($data->account_number); ?>
 	<br />
-
+        
+        <?php /*
 	<b><?php echo CHtml::encode($data->getAttributeLabel('created_at')); ?>:</b>
 	<?php echo CHtml::encode($data->created_at); ?>
 	<br />

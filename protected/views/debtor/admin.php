@@ -59,7 +59,7 @@ $('.search-form form').submit(function(){
 		'social_insurance_number',
 		'date_filed_chapter7',
 		'date_filed_chapter13',
-		'home_telephone',
+		/*'home_telephone',
 		'mobile_telephone',
 		'other_telephone',
 		'best_time_to_call',
@@ -74,11 +74,11 @@ $('.search-form form').submit(function(){
 		'employment_disability',
 		'employee_pension',
 		'correspondence_language',
-		'comments',
+		'comments',*/
 		'spouse_firstname',
 		'spouse_lastname',
 		'spouse_address',
-		'spouse_marital_status',
+		/*'spouse_marital_status',
 		'spouse_monthly_income',
 		'spouse_gross_monthly_income',
 		'spouse_employment_status',
@@ -89,7 +89,7 @@ $('.search-form form').submit(function(){
 		'spouse_drivers_licence',
 		'spouse_active_duty',
 		'spouse_comments',
-		/*'created_at',
+		'created_at',
 		'updated_at',
 		*/
 		array(

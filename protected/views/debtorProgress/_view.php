@@ -28,7 +28,6 @@
 	<?php echo CHtml::encode($data->current_settlement_perc); ?>
 	<br />
 
-	<?php /*
 	<b><?php echo CHtml::encode($data->getAttributeLabel('offer_date')); ?>:</b>
 	<?php echo CHtml::encode($data->offer_date); ?>
 	<br />
@@ -60,7 +59,7 @@
 	<b><?php echo CHtml::encode($data->getAttributeLabel('savings')); ?>:</b>
 	<?php echo CHtml::encode($data->savings); ?>
 	<br />
-
+        <?php /*
 	<b><?php echo CHtml::encode($data->getAttributeLabel('created_at')); ?>:</b>
 	<?php echo CHtml::encode($data->created_at); ?>
 	<br />

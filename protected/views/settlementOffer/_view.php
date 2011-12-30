@@ -28,7 +28,6 @@
 	<?php echo CHtml::encode($data->offer_amount); ?>
 	<br />
 
-	<?php /*
 	<b><?php echo CHtml::encode($data->getAttributeLabel('offer_amount_percentage')); ?>:</b>
 	<?php echo CHtml::encode($data->offer_amount_percentage); ?>
 	<br />
@@ -64,7 +63,8 @@
 	<b><?php echo CHtml::encode($data->getAttributeLabel('comments')); ?>:</b>
 	<?php echo CHtml::encode($data->comments); ?>
 	<br />
-
+        
+        <?php /*
 	<b><?php echo CHtml::encode($data->getAttributeLabel('created_at')); ?>:</b>
 	<?php echo CHtml::encode($data->created_at); ?>
 	<br />

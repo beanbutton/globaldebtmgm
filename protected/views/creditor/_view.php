@@ -28,7 +28,6 @@
 	<?php echo CHtml::encode($data->telephone1_ext); ?>
 	<br />
 
-	<?php /*
 	<b><?php echo CHtml::encode($data->getAttributeLabel('telephone2')); ?>:</b>
 	<?php echo CHtml::encode($data->telephone2); ?>
 	<br />
@@ -48,7 +47,7 @@
 	<b><?php echo CHtml::encode($data->getAttributeLabel('comments')); ?>:</b>
 	<?php echo CHtml::encode($data->comments); ?>
 	<br />
-
+        <?php /*
 	<b><?php echo CHtml::encode($data->getAttributeLabel('created_at')); ?>:</b>
 	<?php echo CHtml::encode($data->created_at); ?>
 	<br />

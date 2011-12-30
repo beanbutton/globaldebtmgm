@@ -1,17 +1,5 @@
 <?php $this->pageTitle=Yii::app()->name; ?>
-<!--
-<h1>Welcome to <i><?php echo CHtml::encode(Yii::app()->name); ?></i></h1>
-
-<p>Congratulations! You have successfully created your Yii application.</p>
-
-<p>You may change the content of this page by modifying the following two files:</p>
-<ul>
-	<li>View file: <tt><?php echo __FILE__; ?></tt></li>
-	<li>Layout file: <tt><?php echo $this->getLayoutFile('main'); ?></tt></li>
-</ul>
-
-<p>For more details on how to further develop this application, please read
-the <a href="http://www.yiiframework.com/doc/">documentation</a>.
-Feel free to ask in the <a href="http://www.yiiframework.com/forum/">forum</a>,
-should you have any questions.</p>
--->
+<p>100% free consultation to discuss your current situation.<br> 
+    A free consultation with a debt settlement specialist takes less than 10 minutes.<br> 
+    Call 888-207-0677 today and let a Debt settlement specialist help you make<br> 
+    an informed educated decision or fill out the online form.</p>
