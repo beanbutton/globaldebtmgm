@@ -48,7 +48,6 @@ class DebtorSettlementOffer extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('created_at', 'required'),
 			array('Fk_debtor_id, Fk_creditor_id, Fk_negotiator_id, offer_status', 'numerical', 'integerOnly'=>true),
 			array('offer_amount, offer_amount_percentage, client_saving_amonut, client_savings_percentage, client_reserves, service_fees, difference_amount', 'numerical'),
 			array('offer_date, offer_valid_until_date, updated_at', 'safe'),
@@ -57,6 +56,19 @@ class DebtorSettlementOffer extends CActiveRecord
 			array('id, Fk_debtor_id, Fk_creditor_id, Fk_negotiator_id, offer_date, offer_valid_until_date, offer_amount, offer_amount_percentage, client_saving_amonut, client_savings_percentage, client_reserves, service_fees, difference_amount, offer_status, created_at, updated_at', 'safe', 'on'=>'search'),
 		);
 	}
+        
+        /**
+	 * @return before save
+	 */
+        public function beforeSave() {
+            if ($this->isNewRecord)
+                $this->created_at = new CDbExpression('NOW()');
+            else
+                $this->updated_at = new CDbExpression('NOW()');
+
+            return parent::beforeSave();
+        }
+
 
 	/**
 	 * @return array relational rules.

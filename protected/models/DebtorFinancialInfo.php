@@ -45,15 +45,25 @@ class DebtorFinancialInfo extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('created_at', 'required'),
-			array('Fk_debtor_id', 'numerical', 'integerOnly'=>true),
+                        array('Fk_debtor_id', 'numerical', 'integerOnly'=>true),
 			array('name_financial_institution, branch_address, city, province, postal_code, phone_number, institution_numer, branch_number, account_number', 'length', 'max'=>255),
-			array('updated_at', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('id, Fk_debtor_id, name_financial_institution, branch_address, city, province, postal_code, phone_number, institution_numer, branch_number, account_number, created_at, updated_at', 'safe', 'on'=>'search'),
 		);
 	}
+        
+        /**
+	 * @return before save
+	 */
+        public function beforeSave() {
+            if ($this->isNewRecord)
+                $this->created_at = new CDbExpression('NOW()');
+            else
+                $this->updated_at = new CDbExpression('NOW()');
+
+            return parent::beforeSave();
+        }
 
 	/**
 	 * @return array relational rules.

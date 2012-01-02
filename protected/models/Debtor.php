@@ -84,7 +84,6 @@ class Debtor extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('created_at, updated_at', 'required'),
 			array('Fk_user_id, Fk_client_id, Fk_debtor_additional_info_id, Fk_creditor_id, Fk_negotiator_id, Fk_budget_info_id, Fk_program_info_id, Fk_amortization_id, Fk_settlement_offer_id, Fk_client_progress_id, employment_status, employment_work_years, employment_insurance, employment_disability, employee_pension, correspondence_language, spouse_marital_status, spouse_employment_status, spouse_employment_work_years, spouse_number_of_children, spouse_active_duty', 'numerical', 'integerOnly'=>true),
 			array('spouse_monthly_income, spouse_gross_monthly_income', 'numerical'),
 			array('file_number, firstname, lastname, address, drivers_licence, social_insurance_number, home_telephone, mobile_telephone, other_telephone, best_time_to_call, faxnumber, email, employer, employment_occupation, employment_telephone, comments, spouse_firstname, spouse_lastname, spouse_address, spouse_employer, spouse_employment_occupation, spouse_drivers_licence, spouse_comments', 'length', 'max'=>255),
@@ -94,6 +93,19 @@ class Debtor extends CActiveRecord
 			array('id, Fk_user_id, Fk_client_id, Fk_debtor_additional_info_id, Fk_creditor_id, Fk_negotiator_id, Fk_budget_info_id, Fk_program_info_id, Fk_amortization_id, Fk_settlement_offer_id, Fk_client_progress_id, file_number, firstname, lastname, address, drivers_licence, date_of_birth, social_insurance_number, date_filed_chapter7, date_filed_chapter13, home_telephone, mobile_telephone, other_telephone, best_time_to_call, faxnumber, email, employment_status, employer, employment_occupation, employment_work_years, employment_telephone, employment_insurance, employment_disability, employee_pension, correspondence_language, comments, spouse_firstname, spouse_lastname, spouse_address, spouse_marital_status, spouse_monthly_income, spouse_gross_monthly_income, spouse_employment_status, spouse_employer, spouse_employment_occupation, spouse_employment_work_years, spouse_number_of_children, spouse_drivers_licence, spouse_active_duty, spouse_comments, created_at, updated_at', 'safe', 'on'=>'search'),
 		);
 	}
+        
+        /**
+	 * @return before save
+	 */
+        public function beforeSave() {
+            if ($this->isNewRecord)
+                $this->created_at = new CDbExpression('NOW()');
+            else
+                $this->updated_at = new CDbExpression('NOW()');
+
+            return parent::beforeSave();
+        }
+
 
 	/**
 	 * @return array relational rules.

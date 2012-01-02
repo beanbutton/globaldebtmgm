@@ -40,7 +40,6 @@ class User extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('created_at, updated_at', 'required'),
 			array('Fk_role_id, remember_me', 'numerical', 'integerOnly'=>true),
 			array('username, password, salt', 'length', 'max'=>255),
 			// The following rule is used by search().
@@ -48,6 +47,18 @@ class User extends CActiveRecord
 			array('id, Fk_role_id, username, password, salt, remember_me, created_at, updated_at', 'safe', 'on'=>'search'),
 		);
 	}
+
+        /**
+	 * @return before save
+	 */
+        public function beforeSave() {
+            if ($this->isNewRecord)
+                $this->created_at = new CDbExpression('NOW()');
+            else
+                $this->updated_at = new CDbExpression('NOW()');
+
+            return parent::beforeSave();
+        }
 
 	/**
 	 * @return array relational rules.

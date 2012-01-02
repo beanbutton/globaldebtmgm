@@ -41,15 +41,26 @@ class Negotiator extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('created_at', 'required'),
 			array('Fk_debtor_id', 'numerical', 'integerOnly'=>true),
 			array('name, address, telephone, email, faxnumber', 'length', 'max'=>255),
-			array('updated_at', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('id, Fk_debtor_id, name, address, telephone, email, faxnumber, created_at, updated_at', 'safe', 'on'=>'search'),
 		);
 	}
+        
+        /**
+	 * @return before save
+	 */
+        public function beforeSave() {
+            if ($this->isNewRecord)
+                $this->created_at = new CDbExpression('NOW()');
+            else
+                $this->updated_at = new CDbExpression('NOW()');
+
+            return parent::beforeSave();
+        }
+
 
 	/**
 	 * @return array relational rules.

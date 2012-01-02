@@ -56,7 +56,6 @@ class ProgramInfo extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('created_at', 'required'),
 			array('monthly_payment, total_debt, original_debt, monthly_income, saf_monthly_payment, nsf_amount, maintenance_fee_manual, maintenance_fee_automatic, admin_fee_automatic, admin_fee_perc_automatic, admin_fee_manual, admin_fee_perc_manual, service_fee_automatic, service_fee_perc_automatic, service_fee_manual, service_fee_perc_manual', 'numerical'),
 			array('monthly_payment_due_date, enrollment_date, first_monthly_payment_date, next_payment_due_date, contract_due_date, updated_at', 'safe'),
 			// The following rule is used by search().
@@ -64,6 +63,18 @@ class ProgramInfo extends CActiveRecord
 			array('id, monthly_payment, total_debt, original_debt, monthly_income, saf_monthly_payment, nsf_amount, monthly_payment_due_date, enrollment_date, first_monthly_payment_date, next_payment_due_date, contract_due_date, maintenance_fee_manual, maintenance_fee_automatic, admin_fee_automatic, admin_fee_perc_automatic, admin_fee_manual, admin_fee_perc_manual, service_fee_automatic, service_fee_perc_automatic, service_fee_manual, service_fee_perc_manual, created_at, updated_at', 'safe', 'on'=>'search'),
 		);
 	}
+
+        /**
+	 * @return before save
+	 */
+        public function beforeSave() {
+            if ($this->isNewRecord)
+                $this->created_at = new CDbExpression('NOW()');
+            else
+                $this->updated_at = new CDbExpression('NOW()');
+
+            return parent::beforeSave();
+        }
 
 	/**
 	 * @return array relational rules.

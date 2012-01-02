@@ -49,16 +49,27 @@ class DebtorAdditionalInfo extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('created_at', 'required'),
 			array('spouse_marital_status, spouse_employment_status, spouse_employment_work_years, spouse_number_of_children, spouse_active_duty', 'numerical', 'integerOnly'=>true),
 			array('spouse_monthly_income, spouse_gross_monthly_income', 'numerical'),
 			array('spouse_firstname, spouse_lastname, spouse_address, spouse_employer, spouse_employment_occupation, spouse_drivers_licence, comments', 'length', 'max'=>255),
-			array('updated_at', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('id, spouse_firstname, spouse_lastname, spouse_address, spouse_marital_status, spouse_monthly_income, spouse_gross_monthly_income, spouse_employment_status, spouse_employer, spouse_employment_occupation, spouse_employment_work_years, spouse_number_of_children, spouse_drivers_licence, spouse_active_duty, comments, created_at, updated_at', 'safe', 'on'=>'search'),
 		);
 	}
+        
+        /**
+	 * @return before save
+	 */
+        public function beforeSave() {
+            if ($this->isNewRecord)
+                $this->created_at = new CDbExpression('NOW()');
+            else
+                $this->updated_at = new CDbExpression('NOW()');
+
+            return parent::beforeSave();
+        }
+
 
 	/**
 	 * @return array relational rules.

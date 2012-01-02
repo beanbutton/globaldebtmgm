@@ -47,7 +47,6 @@ class Client extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('created_at', 'required'),
 			array('status', 'numerical', 'integerOnly'=>true),
 			array('savings, total_debt, original_debt', 'numerical'),
 			array('name, file_number, assigned_to, negotiator, client_services, account_managers, comments', 'length', 'max'=>255),
@@ -57,6 +56,18 @@ class Client extends CActiveRecord
 			array('id, name, file_number, savings, assigned_to, negotiator, client_services, account_managers, total_debt, original_debt, enrollment_date, status, comments, created_at, updated_at', 'safe', 'on'=>'search'),
 		);
 	}
+
+        /**
+	 * @return before save
+	 */
+        public function beforeSave() {
+            if ($this->isNewRecord)
+                $this->created_at = new CDbExpression('NOW()');
+            else
+                $this->updated_at = new CDbExpression('NOW()');
+
+            return parent::beforeSave();
+        }
 
 	/**
 	 * @return array relational rules.

@@ -60,16 +60,27 @@ class DebtorBudgetInfo extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('created_at', 'required'),
 			array('total_number_dependants', 'numerical', 'integerOnly'=>true),
 			array('monthly_income, monthly_auto_expenses, car_payment1, car_payment2, recreational_vehicle, monthly_auto_payments, monthly_utilites, monthly_grocery_expenses, monthly_insurance_payments, rrsp, gas_and_electricuty, telephone, water_trash_sewer, cable_and_internet_services, food_stamp_or_other, spouse_monthly_takehome_pay, estimated_home_value, remaining_mortgage_balance, household_expenses, total_debt_to_income_perc, total_expenses_to_income_variance, mortgage, rent', 'numerical'),
 			array('reason_for_hardship', 'length', 'max'=>255),
-			array('updated_at', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('id, monthly_income, monthly_auto_expenses, car_payment1, car_payment2, recreational_vehicle, monthly_auto_payments, monthly_utilites, monthly_grocery_expenses, monthly_insurance_payments, rrsp, gas_and_electricuty, telephone, water_trash_sewer, cable_and_internet_services, food_stamp_or_other, spouse_monthly_takehome_pay, reason_for_hardship, estimated_home_value, remaining_mortgage_balance, total_number_dependants, household_expenses, total_debt_to_income_perc, total_expenses_to_income_variance, mortgage, rent, created_at, updated_at', 'safe', 'on'=>'search'),
 		);
 	}
+        
+        /**
+	 * @return before save
+	 */
+        public function beforeSave() {
+            if ($this->isNewRecord)
+                $this->created_at = new CDbExpression('NOW()');
+            else
+                $this->updated_at = new CDbExpression('NOW()');
+
+            return parent::beforeSave();
+        }
+
 
 	/**
 	 * @return array relational rules.

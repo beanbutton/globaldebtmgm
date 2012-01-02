@@ -61,7 +61,6 @@ class DebtorProgramInfo extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('created_at', 'required'),
 			array('Fk_debtor_id, program_type', 'numerical', 'integerOnly'=>true),
 			array('monthly_payment, total_debt, original_debt, monthly_income, saf_monthly_payment, nsf_amount, maintenance_fee_manual, maintenance_fee_automatic, admin_fee_automatic, admin_fee_percentage_automatic, admin_fee_manual, admin_fee_percentage_manual, service_fee_automatic, service_fee_percentage_automatic, service_fee_manual, service_fee_percentage_manual, savings_amount, savings_percentage', 'numerical'),
 			array('type_of_debt', 'length', 'max'=>255),
@@ -71,6 +70,19 @@ class DebtorProgramInfo extends CActiveRecord
 			array('id, Fk_debtor_id, program_type, monthly_payment, type_of_debt, total_debt, original_debt, monthly_income, saf_monthly_payment, nsf_amount, monthly_payment_due_date, enrollment_date, first_monthly_payment_date, next_payment_due_date, contract_due_date, maintenance_fee_manual, maintenance_fee_automatic, admin_fee_automatic, admin_fee_percentage_automatic, admin_fee_manual, admin_fee_percentage_manual, service_fee_automatic, service_fee_percentage_automatic, service_fee_manual, service_fee_percentage_manual, savings_amount, savings_percentage, created_at, updated_at', 'safe', 'on'=>'search'),
 		);
 	}
+        
+        /**
+	 * @return before save
+	 */
+        public function beforeSave() {
+            if ($this->isNewRecord)
+                $this->created_at = new CDbExpression('NOW()');
+            else
+                $this->updated_at = new CDbExpression('NOW()');
+
+            return parent::beforeSave();
+        }
+
 
 	/**
 	 * @return array relational rules.
