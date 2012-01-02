@@ -4,18 +4,6 @@
 	<?php echo CHtml::link(CHtml::encode($data->id), array('view', 'id'=>$data->id)); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('Fk_debtor_id')); ?>:</b>
-	<?php echo CHtml::encode($data->Fk_debtor_id); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('Fk_creditor_id')); ?>:</b>
-	<?php echo CHtml::encode($data->Fk_creditor_id); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('Fk_negotiator_id')); ?>:</b>
-	<?php echo CHtml::encode($data->Fk_negotiator_id); ?>
-	<br />
-
 	<b><?php echo CHtml::encode($data->getAttributeLabel('status')); ?>:</b>
 	<?php echo CHtml::encode($data->status); ?>
 	<br />

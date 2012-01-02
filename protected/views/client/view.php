@@ -31,7 +31,6 @@ $this->menu=array(
 		'enrollment_date',
 		'status',
 		'comments',
-		'created_at',
-		'updated_at',
+		
 	),
 )); ?>

@@ -19,7 +19,6 @@ $this->menu=array(
 	'data'=>$model,
 	'attributes'=>array(
 		'id',
-		'Fk_debtor_id',
 		'name_financial_institution',
 		'branch_address',
 		'city',
@@ -29,7 +28,6 @@ $this->menu=array(
 		'institution_numer',
 		'branch_number',
 		'account_number',
-		'created_at',
-		'updated_at',
+		
 	),
 )); ?>

@@ -44,7 +44,6 @@ $this->menu=array(
 		'total_expenses_to_income_variance',
 		'mortgage',
 		'rent',
-		'created_at',
-		'updated_at',
+		
 	),
 )); ?>

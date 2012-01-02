@@ -19,7 +19,6 @@ $this->menu=array(
 	'data'=>$model,
 	'attributes'=>array(
 		'id',
-		'Fk_debtor_id',
 		'badge_number',
 		'name',
 		'address',
@@ -30,7 +29,6 @@ $this->menu=array(
 		'email',
 		'faxnumber',
 		'comments',
-		'created_at',
-		'updated_at',
+		
 	),
 )); ?>

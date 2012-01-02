@@ -19,7 +19,6 @@ $this->menu=array(
 	'data'=>$model,
 	'attributes'=>array(
 		'id',
-		'Fk_user_id',
 		'firstname',
 		'lastname',
 		'phone_number',
@@ -29,7 +28,6 @@ $this->menu=array(
 		'email',
 		'emergency_contact',
 		'emergency_phone_number',
-		'created_at',
-		'updated_at',
+		
 	),
 )); ?>

@@ -4,10 +4,6 @@
 	<?php echo CHtml::link(CHtml::encode($data->id), array('view', 'id'=>$data->id)); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('Fk_debtor_id')); ?>:</b>
-	<?php echo CHtml::encode($data->Fk_debtor_id); ?>
-	<br />
-
 	<b><?php echo CHtml::encode($data->getAttributeLabel('payment_start_date')); ?>:</b>
 	<?php echo CHtml::encode($data->payment_start_date); ?>
 	<br />
@@ -28,7 +24,6 @@
 	<?php echo CHtml::encode($data->maintenance_fee); ?>
 	<br />
 
-	<?php /*
 	<b><?php echo CHtml::encode($data->getAttributeLabel('settlement_savings_fund')); ?>:</b>
 	<?php echo CHtml::encode($data->settlement_savings_fund); ?>
 	<br />
@@ -48,7 +43,8 @@
 	<b><?php echo CHtml::encode($data->getAttributeLabel('total_settlement_savings_fund')); ?>:</b>
 	<?php echo CHtml::encode($data->total_settlement_savings_fund); ?>
 	<br />
-
+        
+        <?php /*
 	<b><?php echo CHtml::encode($data->getAttributeLabel('created_at')); ?>:</b>
 	<?php echo CHtml::encode($data->created_at); ?>
 	<br />

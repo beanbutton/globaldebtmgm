@@ -19,9 +19,6 @@ $this->menu=array(
 	'data'=>$model,
 	'attributes'=>array(
 		'id',
-		'Fk_debtor_id',
-		'Fk_creditor_id',
-		'Fk_negotiator_id',
 		'file_number',
 		'offer_date',
 		'offer_amount',
@@ -34,7 +31,6 @@ $this->menu=array(
 		'offer_status',
 		'valid_date',
 		'comments',
-		'created_at',
-		'updated_at',
+		
 	),
 )); ?>

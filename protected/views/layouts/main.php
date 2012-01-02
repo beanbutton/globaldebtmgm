@@ -30,13 +30,13 @@
             'items'=>array( 
                 array('label'=>'Home', 'url'=>array('/site/index')), 
                 array('label'=>'Clients', 'url'=>array('/client/admin')), 
-                array('label'=>'Creditors', 'url'=>array('/creditor')),
+                array('label'=>'Creditors', 'url'=>array('/creditor/admin')),
                 array('label'=>'Debtors',
                   'items'=>array(
                      array('label'=>'Debtors Info',
                       'items'=>array(
                         array('label'=>'Create User', 'url'=>array('/debtor/create')),
-                        array('label'=>'List Debtors', 'url'=>array('/debtor/admin')),
+                        array('label'=>'Manage Debtors', 'url'=>array('/debtor/admin')),
                           ),
                         ),
                      array('label'=>'Debtor Progress', 'url'=>array('/debtorProgress/admin')),

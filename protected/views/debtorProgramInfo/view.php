@@ -19,7 +19,6 @@ $this->menu=array(
 	'data'=>$model,
 	'attributes'=>array(
 		'id',
-		'Fk_debtor_id',
 		'program_type',
 		'monthly_payment',
 		'type_of_debt',
@@ -45,7 +44,6 @@ $this->menu=array(
 		'service_fee_percentage_manual',
 		'savings_amount',
 		'savings_percentage',
-		'created_at',
-		'updated_at',
+		
 	),
 )); ?>

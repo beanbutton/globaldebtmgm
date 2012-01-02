@@ -19,12 +19,9 @@ $this->menu=array(
 	'data'=>$model,
 	'attributes'=>array(
 		'id',
-		'Fk_role_id',
 		'username',
 		'password',
-		'salt',
 		'remember_me',
-		'created_at',
-		'updated_at',
+		
 	),
 )); ?>

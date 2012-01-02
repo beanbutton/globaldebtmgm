@@ -19,13 +19,11 @@ $this->menu=array(
 	'data'=>$model,
 	'attributes'=>array(
 		'id',
-		'Fk_debtor_id',
 		'name',
 		'address',
 		'telephone',
 		'email',
 		'faxnumber',
-		'created_at',
-		'updated_at',
+		
 	),
 )); ?>

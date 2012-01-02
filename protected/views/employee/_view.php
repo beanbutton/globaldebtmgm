@@ -4,10 +4,6 @@
 	<?php echo CHtml::link(CHtml::encode($data->id), array('view', 'id'=>$data->id)); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('Fk_user_id')); ?>:</b>
-	<?php echo CHtml::encode($data->Fk_user_id); ?>
-	<br />
-
 	<b><?php echo CHtml::encode($data->getAttributeLabel('firstname')); ?>:</b>
 	<?php echo CHtml::encode($data->firstname); ?>
 	<br />

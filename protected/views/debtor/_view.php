@@ -4,46 +4,6 @@
 	<?php echo CHtml::link(CHtml::encode($data->id), array('view', 'id'=>$data->id)); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('Fk_user_id')); ?>:</b>
-	<?php echo CHtml::encode($data->Fk_user_id); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('Fk_client_id')); ?>:</b>
-	<?php echo CHtml::encode($data->Fk_client_id); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('Fk_debtor_additional_info_id')); ?>:</b>
-	<?php echo CHtml::encode($data->Fk_debtor_additional_info_id); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('Fk_creditor_id')); ?>:</b>
-	<?php echo CHtml::encode($data->Fk_creditor_id); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('Fk_negotiator_id')); ?>:</b>
-	<?php echo CHtml::encode($data->Fk_negotiator_id); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('Fk_budget_info_id')); ?>:</b>
-	<?php echo CHtml::encode($data->Fk_budget_info_id); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('Fk_program_info_id')); ?>:</b>
-	<?php echo CHtml::encode($data->Fk_program_info_id); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('Fk_amortization_id')); ?>:</b>
-	<?php echo CHtml::encode($data->Fk_amortization_id); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('Fk_settlement_offer_id')); ?>:</b>
-	<?php echo CHtml::encode($data->Fk_settlement_offer_id); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('Fk_client_progress_id')); ?>:</b>
-	<?php echo CHtml::encode($data->Fk_client_progress_id); ?>
-	<br />
-
 	<b><?php echo CHtml::encode($data->getAttributeLabel('file_number')); ?>:</b>
 	<?php echo CHtml::encode($data->file_number); ?>
 	<br />

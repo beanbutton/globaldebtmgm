@@ -19,9 +19,6 @@ $this->menu=array(
 	'data'=>$model,
 	'attributes'=>array(
 		'id',
-		'Fk_debtor_id',
-		'Fk_creditor_id',
-		'Fk_negotiator_id',
 		'status',
 		'current_settlement_offer',
 		'current_settlement_perc',
@@ -33,7 +30,6 @@ $this->menu=array(
 		'settlement_date',
 		'settlement_amount',
 		'savings',
-		'created_at',
-		'updated_at',
+		
 	),
 )); ?>
