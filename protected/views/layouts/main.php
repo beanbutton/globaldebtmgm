@@ -13,7 +13,9 @@
 
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/main.css" />
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/form.css" />
-
+        <!--favicon-->
+        <link rel="shortcut icon" href=""<?php echo Yii::app()->request->baseUrl; ?>/images/favicon.ico">
+  
 	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
 </head>
 
@@ -52,6 +54,8 @@
                     array('label'=>'Change Password', 'url'=>array('/user/list')),
                     array('label'=>'Manage Employees', 'url'=>array('/employee/admin')),
                     array('label'=>'Financial Info', 'url'=>array('/debtorFinancialInfo/admin')),
+                    array('label'=>'Account Payables', 'url'=>array('/accountPayable/admin')),
+                    array('label'=>'Account Receivables', 'url'=>array('/accountReceivable/admin')),
                     array('label'=>'Manage Reports', 'url'=>array('/user/create')), 
                     array('label'=>'File Access', 'url'=>array('/user/create')), 
                    

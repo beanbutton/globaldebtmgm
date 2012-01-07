@@ -142,9 +142,9 @@ div.form .first_col{margin-bottom:10px; width:950px}
 
 div.form .second_col{margin: 5px 0; height:130px; width:950px}
 
-div.form .third_col{float: left; width: 600px;}
+div.form .third_col{float: left; width: 600px; margin-right: 45px;}
 
-div.form .four_col{float: right; width: 265px;}
+div.form .four_col{float: left; width: 295px;}
 
 div.form .hint
 {

@@ -1725,3 +1725,15 @@ Stack trace:
 REQUEST_URI=/globaldebtmgm/index.php?r=settlementOffer/admin
 in /Applications/XAMPP/xamppfiles/htdocs/globaldebtmgm/protected/controllers/SettlementOfferController.php (141)
 in /Applications/XAMPP/xamppfiles/htdocs/globaldebtmgm/index.php (13)
+2012/01/07 17:33:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Accountrecevable/create".' in /Applications/XAMPP/xamppfiles/htdocs/YiiRoot/framework/web/CWebApplication.php:281
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/YiiRoot/framework/web/CWebApplication.php(136): CWebApplication->runController('Accountrecevabl...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/YiiRoot/framework/base/CApplication.php(158): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/globaldebtmgm/index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/globaldebtmgm/index.php?r=Accountrecevable/create
+2012/01/07 17:33:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Accountrecevable/create".' in /Applications/XAMPP/xamppfiles/htdocs/YiiRoot/framework/web/CWebApplication.php:281
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/YiiRoot/framework/web/CWebApplication.php(136): CWebApplication->runController('Accountrecevabl...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/YiiRoot/framework/base/CApplication.php(158): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/globaldebtmgm/index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/globaldebtmgm/index.php?r=Accountrecevable/create
