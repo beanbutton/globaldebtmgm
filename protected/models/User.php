@@ -1,6 +1,7 @@
 <?php
 
-	require_once("AES.class.php");
+	//require_once("AES.class.php");
+	require_once(dirname(__FILE__).'/../extensions/aes/AES.class.php');
 	
 	/**
 	 * This is the model class for table "tbl_user".

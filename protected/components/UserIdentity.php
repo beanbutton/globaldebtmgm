@@ -1,6 +1,8 @@
 <?php
 	
-	include( "AES.class.php");
+	//include( "AES.class.php");
+	require_once(dirname(__FILE__).'/../extensions/aes/AES.class.php');
+
 
 	/**
 	 * UserIdentity represents the data needed to identity a user.
