@@ -2657,3 +2657,33 @@ Stack trace:
 #10 /opt/lampp/htdocs/YiiRoot/framework/base/CApplication.php(158): CWebApplication->processRequest()
 #11 /opt/lampp/htdocs/globaldebtmgm/index.php(13): CApplication->run()
 #12 {main} REQUEST_URI=/globaldebtmgm/index.php?r=debtorProgress/report
+2012/01/17 00:01:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "createfile".' in /opt/lampp/htdocs/YiiRoot/framework/web/CController.php:477
+Stack trace:
+#0 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(262): CController->missingAction('createfile')
+#1 /opt/lampp/htdocs/YiiRoot/framework/web/CWebApplication.php(277): CController->run('createfile')
+#2 /opt/lampp/htdocs/YiiRoot/framework/web/CWebApplication.php(136): CWebApplication->runController('debtorProgress/...')
+#3 /opt/lampp/htdocs/YiiRoot/framework/base/CApplication.php(158): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/globaldebtmgm/index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/globaldebtmgm/index.php?r=debtorProgress/createfile
+2012/01/17 00:01:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "createfil".' in /opt/lampp/htdocs/YiiRoot/framework/web/CController.php:477
+Stack trace:
+#0 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(262): CController->missingAction('createfil')
+#1 /opt/lampp/htdocs/YiiRoot/framework/web/CWebApplication.php(277): CController->run('createfil')
+#2 /opt/lampp/htdocs/YiiRoot/framework/web/CWebApplication.php(136): CWebApplication->runController('debtorProgress/...')
+#3 /opt/lampp/htdocs/YiiRoot/framework/base/CApplication.php(158): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/globaldebtmgm/index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/globaldebtmgm/index.php?r=debtorProgress/createfil
+2012/01/17 00:01:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "file".' in /opt/lampp/htdocs/YiiRoot/framework/web/CWebApplication.php:281
+Stack trace:
+#0 /opt/lampp/htdocs/YiiRoot/framework/web/CWebApplication.php(136): CWebApplication->runController('file')
+#1 /opt/lampp/htdocs/YiiRoot/framework/base/CApplication.php(158): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/globaldebtmgm/index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/globaldebtmgm/index.php?r=file
+2012/01/17 00:01:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "logi".' in /opt/lampp/htdocs/YiiRoot/framework/web/CController.php:477
+Stack trace:
+#0 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(262): CController->missingAction('logi')
+#1 /opt/lampp/htdocs/YiiRoot/framework/web/CWebApplication.php(277): CController->run('logi')
+#2 /opt/lampp/htdocs/YiiRoot/framework/web/CWebApplication.php(136): CWebApplication->runController('site/logi')
+#3 /opt/lampp/htdocs/YiiRoot/framework/base/CApplication.php(158): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/globaldebtmgm/index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/globaldebtmgm/index.php?r=site/logi
