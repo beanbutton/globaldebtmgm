@@ -8,5 +8,5 @@
 		'url' => array('admin')), );
 ?>
 
-<h1>Create FileUploadItem</h1>
+<h1>File Uploads</h1>
 <?php echo $this -> renderPartial('_form', array('model' => $model));?>
