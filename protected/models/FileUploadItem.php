@@ -35,14 +35,21 @@
 			// NOTE: you should only define rules for those attributes that
 			// will receive user inputs.
 			return array(
-		    //array('create_user_id, update_user_id', 'numerical', 'integerOnly' => true), 
-		    array('description', 'required'),
-			array('filename', 'length', 'max' => 128), 
-			array('filename', 'file', 'maxSize' => 1024 * 1024 * 50, 'tooLarge' => 'File has to be smaller than 50MB'), //MODIFY php max_upload_size
-			array('description, create_time, update_time', 'safe'),
+			//array('create_user_id, update_user_id', 'numerical', 'integerOnly' => true),
+				array('description', 'required'), array('filename', 'length', 'max' => 128), array('filename', 'file', 'maxSize' => 1024 * 1024 * 50, 'tooLarge' => 'File has to be smaller than 50MB'), //MODIFY php max_upload_size
+				array('description, create_time, update_time', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 				array('id, description, filename, create_user_id, update_user_id, create_time, update_time', 'safe', 'on' => 'search'), );
+		}
+
+		public function beforeSave() {
+			if ($this -> isNewRecord) {
+				$this -> create_time = new CDbExpression("NOW()");
+			} else {
+				$this -> update_time = new CDbExpression("NOW()");
+			}
+			return parent::beforeSave();
 		}
 
 		/**
