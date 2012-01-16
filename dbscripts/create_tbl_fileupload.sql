@@ -1,6 +1,6 @@
-USE trackstar;
+USE globaldebtmgm;
 
-DROP TABLE IF EXISTS tbl_file_upload_item;
+DROP TABLE IF EXISTS globaldebtmgm;
 CREATE TABLE tbl_file_upload_item
 (
 	id INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,

@@ -1896,3 +1896,27 @@ REQUEST_URI=/globaldebtmgm/index.php?r=user/update&id=7
 in /opt/lampp/htdocs/globaldebtmgm/protected/models/User.php (59)
 in /opt/lampp/htdocs/globaldebtmgm/protected/controllers/UserController.php (71)
 in /opt/lampp/htdocs/globaldebtmgm/index.php (13)
+2012/01/16 17:00:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "gi".' in /opt/lampp/htdocs/YiiRoot/framework/web/CWebApplication.php:281
+Stack trace:
+#0 /opt/lampp/htdocs/YiiRoot/framework/web/CWebApplication.php(136): CWebApplication->runController('gi')
+#1 /opt/lampp/htdocs/YiiRoot/framework/base/CApplication.php(158): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/globaldebtmgm/index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/globaldebtmgm/index.php?r=gi
+2012/01/16 17:00:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "gio".' in /opt/lampp/htdocs/YiiRoot/framework/web/CWebApplication.php:281
+Stack trace:
+#0 /opt/lampp/htdocs/YiiRoot/framework/web/CWebApplication.php(136): CWebApplication->runController('gio')
+#1 /opt/lampp/htdocs/YiiRoot/framework/base/CApplication.php(158): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/globaldebtmgm/index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/globaldebtmgm/index.php?r=gio
+2012/01/16 17:00:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "gio".' in /opt/lampp/htdocs/YiiRoot/framework/web/CWebApplication.php:281
+Stack trace:
+#0 /opt/lampp/htdocs/YiiRoot/framework/web/CWebApplication.php(136): CWebApplication->runController('gio')
+#1 /opt/lampp/htdocs/YiiRoot/framework/base/CApplication.php(158): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/globaldebtmgm/index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/globaldebtmgm/index.php?r=gio
+2012/01/16 17:00:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "gi".' in /opt/lampp/htdocs/YiiRoot/framework/web/CWebApplication.php:281
+Stack trace:
+#0 /opt/lampp/htdocs/YiiRoot/framework/web/CWebApplication.php(136): CWebApplication->runController('gi')
+#1 /opt/lampp/htdocs/YiiRoot/framework/base/CApplication.php(158): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/globaldebtmgm/index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/globaldebtmgm/index.php?r=gi
