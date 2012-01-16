@@ -1,7 +1,7 @@
 <?php
 
-	include ("AES.class.php");
-
+	require_once("AES.class.php");
+	
 	/**
 	 * This is the model class for table "tbl_user".
 	 *
@@ -16,7 +16,6 @@
 	 * @property string $updated_at
 	 */
 	class User extends CActiveRecord {
-		public $z = "abcdefgh01234567";
 
 		/**
 		 * Returns the static model of the specified AR class.
@@ -49,7 +48,7 @@
 		 * @return before save
 		 */
 		public function beforeSave() {
-			$aes = new AES($this -> z);
+			$aes = new AES( AES::$z);
 			if ($this -> isNewRecord) {
 				$this -> salt = md5($this -> password);
 				$this -> password = $aes -> encrypt($this -> password);
