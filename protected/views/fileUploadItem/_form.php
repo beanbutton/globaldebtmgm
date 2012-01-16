@@ -10,13 +10,15 @@
 	<div class="row">
 		<?php echo $form -> labelEx($model, 'description');?>
 		<?php echo $form -> textField($model, 'description', array('rows' => 6, 'cols' => 50));?>
-		<?php echo $form -> error($model, 'description');?>
+		<?php echo $form -> error($model, 'description');?>	
 	</div>
+	
 	<div class="row">
 		<?php echo $form -> labelEx($model, 'filename');?>
 		<?php echo $form -> fileField($model, 'filename', array('size' => 60, 'maxlength' => 128));?>
 		<?php echo $form -> error($model, 'filename');?>
 	</div>
+	
 	<!--
 	<div class="row">
 	<?php echo $form->labelEx($model,'create_user_id'); ?>
@@ -44,7 +46,7 @@
 
 	-->
 	<div class="row buttons">
-		<?php echo CHtml::submitButton($model -> isNewRecord ? 'Create' : 'Save');?>
+		<?php echo CHtml::submitButton($model -> isNewRecord ? 'Submit' : 'Save');?>
 	</div>
 	<?php $this -> endWidget();?>
 </div><!-- form -->

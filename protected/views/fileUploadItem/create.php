@@ -1,15 +1,12 @@
 <?php
-$this->breadcrumbs=array(
-	'File Upload Items'=>array('index'),
-	'Create',
-);
+	$this -> breadcrumbs = array('File Uploads' => array('index'), 'Create', );
 
-$this->menu=array(
-	array('label'=>'List FileUploadItem', 'url'=>array('index')),
-	array('label'=>'Manage FileUploadItem', 'url'=>array('admin')),
-);
+	$this -> menu = array( 
+	array('label' => 'List File Uploads', 
+		'url' => array('index')), 
+		array('label' => 'Manage File Uploads', 
+		'url' => array('admin')), );
 ?>
 
 <h1>Create FileUploadItem</h1>
-
-<?php echo $this->renderPartial('_form', array('model'=>$model)); ?>
+<?php echo $this -> renderPartial('_form', array('model' => $model));?>
