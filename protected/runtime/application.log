@@ -3367,3 +3367,34 @@ Stack trace:
 #14 /opt/lampp/htdocs/YiiRoot/framework/base/CApplication.php(158): CWebApplication->processRequest()
 #15 /opt/lampp/htdocs/globaldebtmgm/index.php(13): CApplication->run()
 #16 {main} REQUEST_URI=/globaldebtmgm/index.php?r=debtorProgress/report&id=debtorProgress
+2012/01/19 00:45:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "creat".' in /opt/lampp/htdocs/YiiRoot/framework/web/CController.php:477
+Stack trace:
+#0 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(262): CController->missingAction('creat')
+#1 /opt/lampp/htdocs/YiiRoot/framework/web/CWebApplication.php(277): CController->run('creat')
+#2 /opt/lampp/htdocs/YiiRoot/framework/web/CWebApplication.php(136): CWebApplication->runController('debtorProgress/...')
+#3 /opt/lampp/htdocs/YiiRoot/framework/base/CApplication.php(158): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/globaldebtmgm/index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/globaldebtmgm/index.php?r=debtorProgress/creat
+2012/01/19 00:45:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "crea".' in /opt/lampp/htdocs/YiiRoot/framework/web/CController.php:477
+Stack trace:
+#0 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(262): CController->missingAction('crea')
+#1 /opt/lampp/htdocs/YiiRoot/framework/web/CWebApplication.php(277): CController->run('crea')
+#2 /opt/lampp/htdocs/YiiRoot/framework/web/CWebApplication.php(136): CWebApplication->runController('debtorProgress/...')
+#3 /opt/lampp/htdocs/YiiRoot/framework/base/CApplication.php(158): CWebApplication->processRequest()
+#4 /opt/lampp/htdocs/globaldebtmgm/index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/globaldebtmgm/index.php?r=debtorProgress/crea
+2012/01/19 00:45:45 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /opt/lampp/htdocs/YiiRoot/framework/web/CController.php:328
+Stack trace:
+#0 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(301): CController->invalidActionParams(Object(CInlineAction))
+#1 /opt/lampp/htdocs/YiiRoot/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 /opt/lampp/htdocs/YiiRoot/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#3 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(1144): CFilter->filter(Object(CFilterChain))
+#4 /opt/lampp/htdocs/YiiRoot/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#5 /opt/lampp/htdocs/YiiRoot/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(283): CFilterChain->run()
+#7 /opt/lampp/htdocs/YiiRoot/framework/web/CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /opt/lampp/htdocs/YiiRoot/framework/web/CWebApplication.php(277): CController->run('report')
+#9 /opt/lampp/htdocs/YiiRoot/framework/web/CWebApplication.php(136): CWebApplication->runController('debtorProgress/...')
+#10 /opt/lampp/htdocs/YiiRoot/framework/base/CApplication.php(158): CWebApplication->processRequest()
+#11 /opt/lampp/htdocs/globaldebtmgm/index.php(13): CApplication->run()
+#12 {main} REQUEST_URI=/globaldebtmgm/index.php?r=debtorProgress/report
