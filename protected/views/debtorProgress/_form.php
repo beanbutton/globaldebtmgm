@@ -71,8 +71,10 @@
 		<?php echo CHtml::submitButton($model -> isNewRecord ? 'Create' : 'Save');?>
 		<?php echo CHtml::submitButton($model -> isNewRecord ? 'Add Report' : 'Save');?>
 		
-						
-		<!-- <?php echo CHtml::link( "Generate Report", "/debtorprogress/report"); ?> -->
+		<!--
+		<?php echo CHtml::submitButton( "Generate Report", 
+			array('submit' => "index.php?r=debtorProgress/report&id=" . $model->id));?>
+		-->
 	</div>
 	<?php $this -> endWidget();?>
 </div><!-- form -->
