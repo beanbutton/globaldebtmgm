@@ -1,5 +1,4 @@
 <?php
-	require (dirname(__FILE__) . '/../extensions/fpdf17/fpdf.php');
 
 	class DebtorProgressController extends Controller {
 		/**

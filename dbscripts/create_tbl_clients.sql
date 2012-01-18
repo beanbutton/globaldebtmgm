@@ -4,6 +4,7 @@ drop table if exists tbl_client;
 create table tbl_client
 (
     id int not null auto_increment primary key,
+    user_id int,
         
     name varchar(255),
     file_number varchar(255), index( file_number),
