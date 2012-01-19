@@ -8,17 +8,22 @@
 
 			// Arial bold 15
 			$this -> SetFont('Arial', 'B', 15);
+			
 			// Calculate width of title and position
 			$w = $this -> GetStringWidth($title) + 6;
 			$this -> SetX((210 - $w) / 2);
+			
 			// Colors of frame, background and text
-			$this -> SetDrawColor(0, 80, 180);
-			$this -> SetFillColor(230, 230, 0);
-			$this -> SetTextColor(220, 50, 50);
+			//$this -> SetDrawColor(0, 80, 180);
+			//$this -> SetFillColor(230, 230, 0);
+			//$this -> SetTextColor(220, 50, 50);
+			
 			// Thickness of frame (1 mm)
 			$this -> SetLineWidth(1);
+			
 			// Title
 			$this -> Cell($w, 9, $title, 1, 1, 'C', true);
+			
 			// Line break
 			$this -> Ln(10);
 		}
@@ -38,9 +43,9 @@
 			// Arial 12
 			$this -> SetFont('Arial', '', 12);
 			// Background color
-			$this -> SetFillColor(200, 220, 255);
+			//$this -> SetFillColor(200, 220, 255);
 			// Title
-			$this -> Cell(0, 6, "Chapter $num : $label", 0, 1, 'L', true);
+			$this -> Cell(0, 6, "$num : $label", 0, 1, 'L', true);
 			// Line break
 			$this -> Ln(4);
 		}

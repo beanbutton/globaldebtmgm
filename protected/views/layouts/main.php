@@ -56,6 +56,7 @@
                     array('label'=>'Financial Info', 'url'=>array('/debtorFinancialInfo/admin')),
                     array('label'=>'Account Payables', 'url'=>array('/accountPayable/admin')),
                     array('label'=>'Account Receivables', 'url'=>array('/accountReceivable/admin')),
+                    array('label'=>'Reports', 'url'=> array('report/admin')),
                     array('label'=>'File Uploads', 'url'=>array('/fileUploadItem/create')), 
                     array('label'=>'File Access', 'url'=>array('/user/create')), 
                    
