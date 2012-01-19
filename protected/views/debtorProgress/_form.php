@@ -69,7 +69,7 @@
     </div>
     <div class="col buttons">
         <?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
-        <?php echo CHtml::submitButton("Generate Report", array('submit' => "index.php?r=debtorProgress/report&id=" . $model->id)); ?>            
+        <?php echo CHtml::submitButton("Generate Report", array('submit' => "index.php?r=debtorProgress/admin" . $model->id)); ?>            
 
 
     </div>

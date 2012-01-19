@@ -1,7 +1,6 @@
 <?php
 
-
-	//TODO: Identical to DebtorProgress 
+	//TODO: Identical to DebtorProgress
 	class ReportController extends Controller {
 		/**
 		 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
@@ -13,7 +12,7 @@
 		 * @return array action filters
 		 */
 		public function filters() {
-			return array('accessControl',     // perform access control for CRUD operations
+			return array('accessControl',      // perform access control for CRUD operations
 			);
 		}
 
@@ -50,18 +49,21 @@
 		 * If creation is successful, the browser will be redirected to the 'view' page.
 		 */
 		public function actionCreate() {
-			$model = new DebtorProgress;
+			//$model = new DebtorProgress;
 
 			// Uncomment the following line if AJAX validation is needed
 			// $this->performAjaxValidation($model);
 
-			if (isset($_POST['DebtorProgress'])) {
-				$model -> attributes = $_POST['DebtorProgress'];
-				if ($model -> save())
-					$this -> redirect(array('view', 'id' => $model -> id));
-			}
+			/**
+			 if (isset($_POST['DebtorProgress'])) {
+			 $model -> attributes = $_POST['DebtorProgress'];
+			 if ($model -> save())
+			 $this -> redirect(array('view', 'id' => $model -> id));
+			 }
+			 *
+			 */
 
-			$this -> render('create', array('model' => $model, ));
+			$this -> render('debtorProgress/admin');
 		}
 
 		/**
