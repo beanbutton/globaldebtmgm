@@ -1,7 +1,7 @@
 <?php
 $this->breadcrumbs=array(
 	'Reports'=>array('index'),
-	'Manage',
+	'Manage Reports',
 );
 
 $this->menu=array(

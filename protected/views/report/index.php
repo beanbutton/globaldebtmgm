@@ -4,12 +4,12 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'Create DebtorProgress', 'url'=>array('create')),
-	array('label'=>'Manage DebtorProgress', 'url'=>array('admin')),
+	array('label'=>'Create Reports', 'url'=>array('create')),
+	array('label'=>'Manage Reports', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Debtor Progresses</h1>
+<h1>Debtor Reports</h1>
 
 <?php $this->widget('zii.widgets.CListView', array(
 	'dataProvider'=>$dataProvider,
