@@ -68,7 +68,6 @@
 		<?php echo $form -> error($model, 'status');?>
 	</div>
 	<div class="col buttons">
-		<?php echo CHtml::submitButton($model -> isNewRecord ? 'Create' : 'Save');?>
 		<?php echo CHtml::submitButton("Generate Report", array('submit' => "index.php?r=debtorProgress/report&id=" . $model -> id));?>
 		
 		<!--

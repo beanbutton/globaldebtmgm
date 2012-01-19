@@ -3398,3 +3398,63 @@ Stack trace:
 #10 /opt/lampp/htdocs/YiiRoot/framework/base/CApplication.php(158): CWebApplication->processRequest()
 #11 /opt/lampp/htdocs/globaldebtmgm/index.php(13): CApplication->run()
 #12 {main} REQUEST_URI=/globaldebtmgm/index.php?r=debtorProgress/report
+2012/01/19 20:59:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "reports/admin".' in /opt/lampp/htdocs/YiiRoot/framework/web/CWebApplication.php:281
+Stack trace:
+#0 /opt/lampp/htdocs/YiiRoot/framework/web/CWebApplication.php(136): CWebApplication->runController('reports/admin')
+#1 /opt/lampp/htdocs/YiiRoot/framework/base/CApplication.php(158): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/globaldebtmgm/index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/globaldebtmgm/index.php?r=reports/admin
+2012/01/19 21:20:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "reports/admin".' in /opt/lampp/htdocs/YiiRoot/framework/web/CWebApplication.php:281
+Stack trace:
+#0 /opt/lampp/htdocs/YiiRoot/framework/web/CWebApplication.php(136): CWebApplication->runController('reports/admin')
+#1 /opt/lampp/htdocs/YiiRoot/framework/base/CApplication.php(158): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/globaldebtmgm/index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/globaldebtmgm/index.php?r=reports/admin
+2012/01/19 21:20:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "reports/admin".' in /opt/lampp/htdocs/YiiRoot/framework/web/CWebApplication.php:281
+Stack trace:
+#0 /opt/lampp/htdocs/YiiRoot/framework/web/CWebApplication.php(136): CWebApplication->runController('reports/admin')
+#1 /opt/lampp/htdocs/YiiRoot/framework/base/CApplication.php(158): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/globaldebtmgm/index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/globaldebtmgm/index.php?r=reports/admin
+2012/01/19 21:20:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "reports/admin".' in /opt/lampp/htdocs/YiiRoot/framework/web/CWebApplication.php:281
+Stack trace:
+#0 /opt/lampp/htdocs/YiiRoot/framework/web/CWebApplication.php(136): CWebApplication->runController('reports/admin')
+#1 /opt/lampp/htdocs/YiiRoot/framework/base/CApplication.php(158): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/globaldebtmgm/index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/globaldebtmgm/index.php?r=reports/admin
+2012/01/19 21:20:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "reports/admin".' in /opt/lampp/htdocs/YiiRoot/framework/web/CWebApplication.php:281
+Stack trace:
+#0 /opt/lampp/htdocs/YiiRoot/framework/web/CWebApplication.php(136): CWebApplication->runController('reports/admin')
+#1 /opt/lampp/htdocs/YiiRoot/framework/base/CApplication.php(158): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/globaldebtmgm/index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/globaldebtmgm/index.php?r=reports/admin
+2012/01/19 21:20:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "reports/admi".' in /opt/lampp/htdocs/YiiRoot/framework/web/CWebApplication.php:281
+Stack trace:
+#0 /opt/lampp/htdocs/YiiRoot/framework/web/CWebApplication.php(136): CWebApplication->runController('reports/admi')
+#1 /opt/lampp/htdocs/YiiRoot/framework/base/CApplication.php(158): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/globaldebtmgm/index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/globaldebtmgm/index.php?r=reports/admi
+2012/01/19 21:20:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "reports/".' in /opt/lampp/htdocs/YiiRoot/framework/web/CWebApplication.php:281
+Stack trace:
+#0 /opt/lampp/htdocs/YiiRoot/framework/web/CWebApplication.php(136): CWebApplication->runController('reports/')
+#1 /opt/lampp/htdocs/YiiRoot/framework/base/CApplication.php(158): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/globaldebtmgm/index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/globaldebtmgm/index.php?r=reports/
+2012/01/19 21:20:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "reports/c".' in /opt/lampp/htdocs/YiiRoot/framework/web/CWebApplication.php:281
+Stack trace:
+#0 /opt/lampp/htdocs/YiiRoot/framework/web/CWebApplication.php(136): CWebApplication->runController('reports/c')
+#1 /opt/lampp/htdocs/YiiRoot/framework/base/CApplication.php(158): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/globaldebtmgm/index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/globaldebtmgm/index.php?r=reports/c
+2012/01/19 21:20:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "reports/create".' in /opt/lampp/htdocs/YiiRoot/framework/web/CWebApplication.php:281
+Stack trace:
+#0 /opt/lampp/htdocs/YiiRoot/framework/web/CWebApplication.php(136): CWebApplication->runController('reports/create')
+#1 /opt/lampp/htdocs/YiiRoot/framework/base/CApplication.php(158): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/globaldebtmgm/index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/globaldebtmgm/index.php?r=reports/create
+2012/01/19 21:23:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "reports/admin".' in /opt/lampp/htdocs/YiiRoot/framework/web/CWebApplication.php:281
+Stack trace:
+#0 /opt/lampp/htdocs/YiiRoot/framework/web/CWebApplication.php(136): CWebApplication->runController('reports/admin')
+#1 /opt/lampp/htdocs/YiiRoot/framework/base/CApplication.php(158): CWebApplication->processRequest()
+#2 /opt/lampp/htdocs/globaldebtmgm/index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/globaldebtmgm/index.php?r=reports/admin
