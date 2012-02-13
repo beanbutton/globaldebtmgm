@@ -276,15 +276,15 @@
 		<?php echo $form->textField($model,'spouse_comments'); ?>
 		<?php echo $form->error($model,'spouse_comments'); ?>
 	</div>
+        <div class="col buttons size-100" style="text-align: right; margin-left: -20px;">
+		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
+	</div>
 
    <?php $this->endWidget('application.extensions.jui.ETab'); ?>
    <?php $this->endWidget('application.extensions.jui.ETabs'); ?>
         
 
-	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
-	</div>
-
+	
 <?php $this->endWidget(); ?>
 
 </div><!-- form -->
