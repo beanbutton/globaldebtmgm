@@ -25,17 +25,9 @@ body
 #content
 {
     padding: 20px;
-    margin-top: 35px;
 }
 
-#content h1{
-    float: left; 
-    width: 500px; 
-    margin-top: -20px;
-}
-
-#content a.search-button{ color: #000000;}
-#content a.search-button:hover{color: #06c;}
+#content h1{float: left;width:100px}
 
 #sidebar
 {

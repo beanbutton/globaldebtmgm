@@ -1,5 +1,7 @@
 <?php
-	require ('/opt/lampp/htdocs/globaldebtmgm/protected/extensions/fpdf17/fpdf.php');
+	/*require ('/opt/lampp/htdocs/globaldebtmgm/protected/extensions/fpdf17/fpdf.php');*/
+        require ('/Users/yuki/htdocs/globaldebtmgm/protected/extensions/fpdf17/fpdf.php');
+        
 	
 	$cell_width= 0;
 	$cell_height= 0;
