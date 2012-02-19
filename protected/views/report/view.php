@@ -1,6 +1,6 @@
 <?php
 $this->breadcrumbs=array(
-	'Debtor Progresses'=>array('index'),
+	'Debtor Reports'=>array('index'),
 	$model->id,
 );
 
@@ -13,7 +13,8 @@ $this->menu=array(
 );
 ?>
 
-<h1>View DebtorProgress #<?php echo $model->id; ?></h1>
+<h1>View Debtor Reports #<?php echo $model->id; ?></h1>
+
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,

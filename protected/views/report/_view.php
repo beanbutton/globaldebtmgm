@@ -48,8 +48,4 @@
 	<?php echo CHtml::encode($data->savings); ?>
 	<br />
 
-	
-
-
-
 </div>

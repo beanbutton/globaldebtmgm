@@ -11,6 +11,10 @@ $this->menu=array(
 
 <h1>Debtor Reports</h1>
 
+<p>
+	<?php echo CHtml::link( CHtml::encode( "Download Report"), Yii::app()->baseUrl . '/file_uploads/' . "memo"); ?>
+</p>
+
 <?php $this->widget('zii.widgets.CListView', array(
 	'dataProvider'=>$dataProvider,
 	'itemView'=>'_view',
