@@ -25,6 +25,9 @@ SET time_zone = "+00:00";
 --
 -- Table structure for table `tbl_account_payable`
 --
+CREATE DATABASE IF NOT EXISTS globaldebtmgm;
+USE globaldebtmgm;
+
 
 CREATE TABLE IF NOT EXISTS `tbl_account_payable` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -37,7 +40,7 @@ CREATE TABLE IF NOT EXISTS `tbl_account_payable` (
   `updated_at` datetime NOT NULL,
   PRIMARY KEY (`id`),
   KEY `Fk_file_id` (`Fk_user_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+);
 
 --
 -- RELATIONS FOR TABLE `tbl_account_payable`:
@@ -62,7 +65,7 @@ CREATE TABLE IF NOT EXISTS `tbl_account_receivable` (
   `updated_at` datetime NOT NULL,
   PRIMARY KEY (`id`),
   KEY `Fk_file_id` (`Fk_user_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+);
 
 --
 -- RELATIONS FOR TABLE `tbl_account_receivable`:
@@ -93,7 +96,7 @@ CREATE TABLE IF NOT EXISTS `tbl_amortization` (
   `updated_at` datetime NOT NULL,
   PRIMARY KEY (`id`),
   KEY `Fk_debtor_id` (`Fk_debtor_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ; ;
 
 --
 -- RELATIONS FOR TABLE `tbl_amortization`:
@@ -126,7 +129,7 @@ CREATE TABLE IF NOT EXISTS `tbl_client` (
   `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   PRIMARY KEY (`id`),
   KEY `file_number` (`file_number`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+);
 
 --
 -- RELATIONS FOR TABLE `tbl_client`:
@@ -158,7 +161,7 @@ CREATE TABLE IF NOT EXISTS `tbl_creditor` (
   `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   PRIMARY KEY (`id`),
   KEY `Fk_debtor_id` (`Fk_debtor_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+);
 
 --
 -- RELATIONS FOR TABLE `tbl_creditor`:
@@ -225,7 +228,7 @@ CREATE TABLE IF NOT EXISTS `tbl_debtor` (
   KEY `lastname` (`lastname`),
   KEY `address` (`address`),
   KEY `social_insurance_number` (`social_insurance_number`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ; 
 
 --
 -- RELATIONS FOR TABLE `tbl_debtor`:
@@ -270,7 +273,7 @@ CREATE TABLE IF NOT EXISTS `tbl_debtor_budget_info` (
   `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   `Fk_debtor_id` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ; 
 
 --
 -- RELATIONS FOR TABLE `tbl_debtor_budget_info`:
@@ -299,7 +302,7 @@ CREATE TABLE IF NOT EXISTS `tbl_debtor_financial_info` (
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+);
 
 --
 -- RELATIONS FOR TABLE `tbl_debtor_financial_info`:
@@ -345,7 +348,7 @@ CREATE TABLE IF NOT EXISTS `tbl_debtor_program_info` (
   `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   PRIMARY KEY (`id`),
   KEY `Fk_debtor_id` (`Fk_debtor_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+);
 
 --
 -- RELATIONS FOR TABLE `tbl_debtor_program_info`:
@@ -377,7 +380,7 @@ CREATE TABLE IF NOT EXISTS `tbl_debtor_progress` (
   `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   PRIMARY KEY (`id`),
   KEY `Fk_debtor_id` (`Fk_debtor_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
+) ;
 
 --
 -- RELATIONS FOR TABLE `tbl_debtor_progress`:
@@ -409,7 +412,7 @@ CREATE TABLE IF NOT EXISTS `tbl_employee` (
   KEY `Fk_user_id` (`Fk_user_id`),
   KEY `firstname` (`firstname`),
   KEY `lastname` (`lastname`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ;
 
 --
 -- RELATIONS FOR TABLE `tbl_employee`:
@@ -433,7 +436,7 @@ CREATE TABLE IF NOT EXISTS `tbl_file_upload_item` (
   `create_time` datetime DEFAULT NULL,
   `update_time` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+);
 
 --
 -- RELATIONS FOR TABLE `tbl_file_upload_item`:
@@ -460,7 +463,7 @@ CREATE TABLE IF NOT EXISTS `tbl_negotiator` (
   `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   PRIMARY KEY (`id`),
   KEY `Fk_debtor_id` (`Fk_debtor_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+);
 
 --
 -- RELATIONS FOR TABLE `tbl_negotiator`:
@@ -496,7 +499,7 @@ CREATE TABLE IF NOT EXISTS `tbl_settlement_offer` (
   PRIMARY KEY (`id`),
   KEY `Fk_debtor_id` (`Fk_debtor_id`),
   KEY `file_number` (`file_number`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ; 
 
 --
 -- RELATIONS FOR TABLE `tbl_settlement_offer`:
@@ -522,8 +525,60 @@ CREATE TABLE IF NOT EXISTS `tbl_user` (
   UNIQUE KEY `username_2` (`username`),
   KEY `username` (`username`),
   KEY `password` (`password`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=12 ;
+);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+
+
+-- FOREGN KEYS
+-- Employee
+ALTER TABLE tbl_employee ADD CONSTRAINT Fk_employee_userid FOREIGN KEY(Fk_user_id) REFERENCES tbl_user(id) ON DELETE CASCADE ON UPDATE RESTRICT;
+
+-- Client
+ALTER TABLE tbl_client ADD CONSTRAINT Fk_client_userid FOREIGN KEY(Fk_user_id) REFERENCES tbl_user(id) ON DELETE CASCADE ON UPDATE RESTRICT;
+
+-- Debtor
+ALTER TABLE tbl_debtor ADD CONSTRAINT Fk_debtor_userid FOREIGN KEY(Fk_user_id) REFERENCES tbl_user(id) ON DELETE CASCADE ON UPDATE RESTRICT;
+
+-- Creditor
+ALTER TABLE tbl_creditor ADD CONSTRAINT Fk_creditor_userid FOREIGN KEY(Fk_user_id) REFERENCES tbl_user(id) ON DELETE CASCADE ON UPDATE RESTRICT;
+ALTER TABLE tbl_creditor ADD CONSTRAINT Fk_creditor_debtorid FOREIGN KEY(Fk_debtor_id) REFERENCES tbl_debtor(id) ON DELETE CASCADE ON UPDATE RESTRICT;
+
+-- Negotiator
+ALTER TABLE tbl_negotiator ADD CONSTRAINT Fk_negotiator_userid FOREIGN KEY(Fk_user_id) REFERENCES tbl_user(id) ON DELETE CASCADE ON UPDATE RESTRICT;
+ALTER TABLE tbl_negotiator ADD CONSTRAINT Fk_negotiator_debtorid FOREIGN KEY(Fk_debtor_id) REFERENCES tbl_debtor(id) ON DELETE CASCADE ON UPDATE RESTRICT;
+
+
+--financial_info 
+ALTER TABLE tbl_debtor_financial_info ADD CONSTRAINT Fk_financialinfo_debtorid FOREIGN KEY(Fk_debtor_id) REFERENCES tbl_debtor(id) ON DELETE CASCADE ON UPDATE RESTRICT;
+
+-- program_info
+ALTER TABLE tbl_debtor_program_info ADD CONSTRAINT Fk_programinfo_debtorid FOREIGN KEY(Fk_debtor_id) REFERENCES tbl_debtor(id) ON DELETE CASCADE ON UPDATE RESTRICT;
+ 
+
+-- progress_
+ALTER TABLE tbl_debtor_progress ADD CONSTRAINT Fk_progress_debtorid FOREIGN KEY(Fk_debtor_id) REFERENCES tbl_debtor(id) ON DELETE CASCADE ON UPDATE RESTRICT;
+
+
+-- budget_info
+ALTER TABLE tbl_debtor_budget_info ADD CONSTRAINT Fk_budgetinfo_debtorid FOREIGN KEY(Fk_debtor_id) REFERENCES tbl_debtor(id) ON DELETE CASCADE ON UPDATE RESTRICT;
+
+-- amortization
+ALTER TABLE tbl_amortization ADD CONSTRAINT Fk_amortization_debtorid FOREIGN KEY(Fk_debtor_id) REFERENCES tbl_debtor(id) ON DELETE CASCADE ON UPDATE RESTRICT;
+
+
+-- settlement_offer
+ALTER TABLE tbl_settlement_offer ADD CONSTRAINT Fk_settlementoffer_debtorid FOREIGN KEY(Fk_debtor_id) REFERENCES tbl_debtor(id) ON DELETE CASCADE ON UPDATE RESTRICT;
+
+-- file_upload_item
+ALTER TABLE tbl_file_upload_item ADD CONSTRAINT Fk_fileuploaditem_userid FOREIGN KEY(Fk_user_id) REFERENCES tbl_user(id) ON DELETE CASCADE ON UPDATE RESTRICT;
+
+-- account_receivable
+ALTER TABLE tbl_account_receivable ADD CONSTRAINT Fk_accountreceivable_userid FOREIGN KEY(Fk_user_id) REFERENCES tbl_user(id) ON DELETE CASCADE ON UPDATE RESTRICT;
+
+-- account_payable
+ALTER TABLE tbl_account_payable ADD CONSTRAINT Fk_accountpayable_userid FOREIGN KEY(Fk_user_id) REFERENCES tbl_user(id) ON DELETE CASCADE ON UPDATE RESTRICT;
+
